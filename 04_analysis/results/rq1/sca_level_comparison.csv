@@ -1,0 +1,10 @@
+tool,approach,TP,FP,TN,FN,Precision,Recall,F1,Accuracy
+Clang Static Analyzer,Heuristic,1,1,270,14,0.5,0.066667,0.117647,0.947552
+Clang Static Analyzer,DeepSeek-v4-flash,6,18,253,9,0.25,0.4,0.307692,0.905594
+Clang Static Analyzer,GPT,6,26,245,9,0.1875,0.4,0.255319,0.877622
+CodeQL,Heuristic,8,21,309,24,0.275862,0.25,0.262295,0.875691
+CodeQL,DeepSeek-v4-flash,19,105,225,13,0.153226,0.59375,0.24359,0.674033
+CodeQL,GPT,11,99,231,21,0.1,0.34375,0.15493,0.668508
+Cppcheck,Heuristic,3,35,340,1,0.078947,0.75,0.142857,0.905013
+Cppcheck,DeepSeek-v4-flash,1,54,321,3,0.018182,0.25,0.033898,0.849604
+Cppcheck,GPT,1,91,284,3,0.01087,0.25,0.020833,0.751979

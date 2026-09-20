@@ -1,0 +1,81 @@
+{
+  "stage1_calls": 977,
+  "stage2_calls": 257,
+  "retry_calls": 34,
+  "failed_calls": 0,
+  "parse_failures": 37,
+  "other_failures": 0,
+  "input_tokens": 7668380,
+  "output_tokens": 462750,
+  "total_tokens": 8131130,
+  "usage_available": true,
+  "runtime_seconds": 18227.352,
+  "reused_stage1_cache_count": 73,
+  "http_status_counts": {
+    "200": 1234
+  },
+  "error_type_counts": {
+    "Unable to locate a complete JSON object: line 1 column 1 (char 0)": 36,
+    "Missing field: safety_hypothesis_status": 1
+  },
+  "total_calls": 1234,
+  "stage1_summary": {
+    "unique_warnings": 1027,
+    "stored_raw_records": 1050,
+    "actual_api_calls": 977,
+    "retry_calls": 23,
+    "attempt_distribution": {
+      "min": 1,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 3
+    },
+    "http_status_counts": {
+      "200": 977
+    },
+    "finish_reason_counts": {
+      "stop": 977
+    },
+    "parse_failures": 26,
+    "error_type_counts": {
+      "Unable to locate a complete JSON object: line 1 column 1 (char 0)": 26
+    },
+    "input_tokens": 5091538,
+    "output_tokens": 233791,
+    "total_tokens": 5325329,
+    "usage_available": true,
+    "timestamp_min": "2026-09-02T04:47:32.694088+00:00",
+    "timestamp_max": "2026-09-02T09:51:20.046149+00:00",
+    "runtime_span_seconds": 18227.352
+  },
+  "stage2_summary": {
+    "unique_warnings": 246,
+    "stored_raw_records": 257,
+    "actual_api_calls": 257,
+    "retry_calls": 11,
+    "attempt_distribution": {
+      "min": 1,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 3
+    },
+    "http_status_counts": {
+      "200": 257
+    },
+    "finish_reason_counts": {
+      "stop": 257
+    },
+    "parse_failures": 11,
+    "error_type_counts": {
+      "Unable to locate a complete JSON object: line 1 column 1 (char 0)": 10,
+      "Missing field: safety_hypothesis_status": 1
+    },
+    "input_tokens": 2576842,
+    "output_tokens": 228959,
+    "total_tokens": 2805801,
+    "usage_available": true,
+    "timestamp_min": "2026-09-02T08:16:03.315584+00:00",
+    "timestamp_max": "2026-09-02T09:46:35.347154+00:00",
+    "runtime_span_seconds": 5432.032
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "gpt_baseline": {
+    "TP": 18,
+    "FP": 216,
+    "TN": 760,
+    "FN": 33,
+    "Precision": 0.076923,
+    "Recall": 0.352941,
+    "F1": 0.126316,
+    "Accuracy": 0.757546
+  },
+  "gpt_stage1": {
+    "TP": 19,
+    "FP": 196,
+    "TN": 780,
+    "FN": 32,
+    "Precision": 0.088372,
+    "Recall": 0.372549,
+    "F1": 0.142857,
+    "Accuracy": 0.777994
+  },
+  "gpt_fusion": {
+    "TP": 16,
+    "FP": 81,
+    "TN": 895,
+    "FN": 35,
+    "Precision": 0.164948,
+    "Recall": 0.313725,
+    "F1": 0.216216,
+    "Accuracy": 0.88705
+  },
+  "deepseek_baseline": {
+    "TP": 26,
+    "FP": 177,
+    "TN": 799,
+    "FN": 25,
+    "Precision": 0.128079,
+    "Recall": 0.509804,
+    "F1": 0.204724,
+    "Accuracy": 0.803311
+  },
+  "deepseek_fusion": {
+    "TP": 27,
+    "FP": 96,
+    "TN": 880,
+    "FN": 24,
+    "Precision": 0.219512,
+    "Recall": 0.529412,
+    "F1": 0.310345,
+    "Accuracy": 0.883155
+  },
+  "routing": {
+    "agreement": 781,
+    "disagreement": 246,
+    "branch_a": 196,
+    "branch_b": 50
+  }
+}

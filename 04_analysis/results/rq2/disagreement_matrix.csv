@@ -1,0 +1,3 @@
+heuristic_FP_deepseek_FP,heuristic_FP_deepseek_TP,heuristic_FP_gpt_FP,heuristic_FP_gpt_TP,heuristic_TP_deepseek_FP,heuristic_TP_deepseek_TP,heuristic_TP_gpt_FP,heuristic_TP_gpt_TP,pair
+769,189,,,55,14,,,Heuristic vs DeepSeek
+,,743,215,,,50,19,Heuristic vs GPT

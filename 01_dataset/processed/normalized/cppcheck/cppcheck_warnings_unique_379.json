@@ -1,0 +1,5308 @@
+[
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 1262,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/cf-socket.c",
+    "line_number": 2168,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/conncache.c",
+    "line_number": 493,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cpool' is redundant or there is possible null pointer dereference: cpool.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/conncache.c",
+    "line_number": 667,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cpool' is redundant or there is possible null pointer dereference: cpool.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/conncache.c",
+    "line_number": 672,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cpool' is redundant or there is possible null pointer dereference: cpool.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/conncache.c",
+    "line_number": 1030,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: cpool",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/conncache.c",
+    "line_number": 666,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cpool' is redundant or there is possible null pointer dereference: cpool.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/hostip.c",
+    "line_number": 1321,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/smtp.c",
+    "line_number": 1445,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/vtls/bearssl.c",
+    "line_number": 595,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/vtls/bearssl.c",
+    "line_number": 600,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/vtls/bearssl.c",
+    "line_number": 611,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.11.1",
+    "project_version": "8.11.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 540,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 153,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 178,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 315,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/cfilters.c",
+    "line_number": 453,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/curl_gssapi.c",
+    "line_number": 81,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/http_proxy.c",
+    "line_number": 321,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/socks_gssapi.c",
+    "line_number": 391,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 1143,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/vtls/rustls.c",
+    "line_number": 555,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: conn_config",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/vtls/rustls.c",
+    "line_number": 1031,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/vtls/rustls.c",
+    "line_number": 1034,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.13.0",
+    "project_version": "8.13.0",
+    "file_path": "lib/vtls/rustls.c",
+    "line_number": 1050,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-ares.c",
+    "line_number": 793,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 422,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 423,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 424,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 425,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 426,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 427,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 428,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 676,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'thrdd->addr' is redundant or there is possible null pointer dereference: thrdd->addr.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/asyn-thrdd.c",
+    "line_number": 746,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/curl_sasl.c",
+    "line_number": 878,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/curl_sasl.c",
+    "line_number": 935,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/http_aws_sigv4.c",
+    "line_number": 917,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/mqtt.c",
+    "line_number": 684,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 224,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 240,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 535,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 593,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 885,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 886,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 887,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 889,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vquic/curl_msh3.c",
+    "line_number": 931,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vtls/vtls.c",
+    "line_number": 1340,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vtls/vtls.c",
+    "line_number": 1530,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vtls/vtls.c",
+    "line_number": 1746,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.15.0",
+    "project_version": "8.15.0",
+    "file_path": "lib/vtls/vtls.c",
+    "line_number": 1752,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 157,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 158,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 167,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 228,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 442,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 1217,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 1331,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-haproxy.c",
+    "line_number": 166,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-haproxy.c",
+    "line_number": 173,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-haproxy.c",
+    "line_number": 174,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-haproxy.c",
+    "line_number": 175,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 132,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 134,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 135,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 136,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 137,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 143,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 171,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 174,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 412,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-https-connect.c",
+    "line_number": 414,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-socket.c",
+    "line_number": 759,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-socket.c",
+    "line_number": 893,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-socket.c",
+    "line_number": 917,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-socket.c",
+    "line_number": 1350,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/cf-socket.c",
+    "line_number": 1701,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/conncache.c",
+    "line_number": 466,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/conncache.c",
+    "line_number": 479,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/hostip.c",
+    "line_number": 313,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/hostip.c",
+    "line_number": 485,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/hostip.c",
+    "line_number": 720,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/hostip.c",
+    "line_number": 1272,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/hostip.c",
+    "line_number": 1301,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/hostip.c",
+    "line_number": 693,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/http_proxy.c",
+    "line_number": 181,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/http_proxy.c",
+    "line_number": 275,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/ldap.c",
+    "line_number": 360,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/mqtt.c",
+    "line_number": 663,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/socks.c",
+    "line_number": 842,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/telnet.c",
+    "line_number": 1509,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/bearssl.c",
+    "line_number": 587,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/bearssl.c",
+    "line_number": 590,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/bearssl.c",
+    "line_number": 592,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/bearssl.c",
+    "line_number": 593,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/bearssl.c",
+    "line_number": 601,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 314,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 315,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 365,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 369,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 370,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 371,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 372,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 373,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 374,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 381,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 382,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 784,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 926,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 2873,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 2874,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 2966,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3210,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3213,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3214,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3215,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3216,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3508,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3509,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3510,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3511,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3525,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 4451,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 4452,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 4594,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'connssl' is redundant or there is possible null pointer dereference: connssl.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 173,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 174,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 472,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 480,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 487,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 508,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 1156,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!backend->cred' is redundant or there is possible null pointer dereference: backend->cred.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 2753,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 364,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 368,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 369,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 389,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 768,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.7.1",
+    "project_version": "8.7.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 957,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/cf-h2-proxy.c",
+    "line_number": 1275,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/cfilters.c",
+    "line_number": 227,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/cfilters.c",
+    "line_number": 229,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'cf' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/conncache.c",
+    "line_number": 980,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: connc",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 1194,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/mbedtls.c",
+    "line_number": 965,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 2876,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 3457,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 4476,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/openssl.c",
+    "line_number": 4840,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'connssl' is redundant or there is possible null pointer dereference: connssl.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/schannel.c",
+    "line_number": 174,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 577,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 578,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: conn_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "curl",
+    "project_name_with_version": "curl-8.9.1",
+    "project_version": "8.9.1",
+    "file_path": "lib/vtls/wolfssl.c",
+    "line_number": 1301,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: ssl_config",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "fftools/ffmpeg_filter.c",
+    "line_number": 187,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!fg' is redundant or there is possible null pointer dereference: fg.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "fftools/ffmpeg.c",
+    "line_number": 816,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'pkt' is redundant or there is possible null pointer dereference: pkt.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "fftools/ffmpeg.c",
+    "line_number": 817,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'pkt' is redundant or there is possible null pointer dereference: pkt.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "fftools/ffmpeg.c",
+    "line_number": 2856,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'ist' is redundant or there is possible null pointer dereference: ist.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "fftools/ffmpeg.c",
+    "line_number": 3837,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!dst_data' is redundant or there is possible null pointer dereference: dst_data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "fftools/ffmpeg_mux_init.c",
+    "line_number": 693,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!p' is redundant or there is possible null pointer dereference: dest.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavcodec/libdavs2.c",
+    "line_number": 68,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!pic' is redundant or there is possible null pointer dereference: pic.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavcodec/motionpixels_tablegen.h",
+    "line_number": 41,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: cm",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavcodec/videotoolboxenc.c",
+    "line_number": 1722,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: dst",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavcodec/xpmdec.c",
+    "line_number": 215,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'string' is redundant or there is possible null pointer dereference: string.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavcodec/xpmdec.c",
+    "line_number": 220,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'string' is redundant or there is possible null pointer dereference: string.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavfilter/dnn/dnn_backend_tf.c",
+    "line_number": 161,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!request' is redundant or there is possible null pointer dereference: request.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavfilter/dnn/dnn_backend_tf.c",
+    "line_number": 162,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!request' is redundant or there is possible null pointer dereference: request.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavformat/hlsenc.c",
+    "line_number": 1182,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'en' is redundant or there is possible null pointer dereference: en.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "libavformat/oggenc.c",
+    "line_number": 628,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: oggstream",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.0",
+    "project_version": "6.0",
+    "file_path": "tools/target_dem_fuzzer.c",
+    "line_number": 165,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'avif=av_demuxer_iterate(&avif_iter)' is redundant or there is possible null pointer dereference: avif.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.1.1",
+    "project_version": "6.1.1",
+    "file_path": "fftools/ffmpeg_enc.c",
+    "line_number": 487,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'pkt' is redundant or there is possible null pointer dereference: pkt.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.1.1",
+    "project_version": "6.1.1",
+    "file_path": "fftools/ffmpeg_enc.c",
+    "line_number": 488,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'pkt' is redundant or there is possible null pointer dereference: pkt.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.1.1",
+    "project_version": "6.1.1",
+    "file_path": "libavcodec/evc_frame_merge_bsf.c",
+    "line_number": 46,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'pps' is redundant or there is possible null pointer dereference: pps.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-6.1.1",
+    "project_version": "6.1.1",
+    "file_path": "libavcodec/evc_parser.c",
+    "line_number": 124,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'pps' is redundant or there is possible null pointer dereference: pps.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-7.0.1",
+    "project_version": "7.0.1",
+    "file_path": "libavcodec/bsf/evc_frame_merge.c",
+    "line_number": 46,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'pps' is redundant or there is possible null pointer dereference: pps.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-7.0.1",
+    "project_version": "7.0.1",
+    "file_path": "libavformat/iamf_reader.c",
+    "line_number": 208,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'audio_element' is redundant or there is possible null pointer dereference: audio_element.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-7.1",
+    "project_version": "7.1",
+    "file_path": "fftools/ffmpeg_enc.c",
+    "line_number": 461,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: pkt",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-7.1",
+    "project_version": "7.1",
+    "file_path": "fftools/ffmpeg_enc.c",
+    "line_number": 462,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: pkt",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "ffmpeg",
+    "project_name_with_version": "ffmpeg-7.1",
+    "project_version": "7.1",
+    "file_path": "fftools/ffmpeg_enc.c",
+    "line_number": 469,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: pkt",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "attr.c",
+    "line_number": 257,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!param' is redundant or there is possible null pointer dereference: name.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "bisect.c",
+    "line_number": 993,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!fp' is redundant or there is possible null pointer dereference: fp.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "blame.c",
+    "line_number": 1392,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: p",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/branch.c",
+    "line_number": 929,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!branch' is redundant or there is possible null pointer dereference: branch.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/checkout.c",
+    "line_number": 822,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!tree' is redundant or there is possible null pointer dereference: tree.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/fast-import.c",
+    "line_number": 1294,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!c' is redundant or there is possible null pointer dereference: c.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/fast-import.c",
+    "line_number": 2556,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!buf' is redundant or there is possible null pointer dereference: buf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/fast-import.c",
+    "line_number": 3342,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!f' is redundant or there is possible null pointer dereference: f.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/fetch.c",
+    "line_number": 579,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!ref_map' is redundant or there is possible null pointer dereference: ref_map.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/push.c",
+    "line_number": 672,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!remote' is redundant or there is possible null pointer dereference: remote.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/unpack-objects.c",
+    "line_number": 240,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!obj_buf' is redundant or there is possible null pointer dereference: obj_buf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/unpack-objects.c",
+    "line_number": 302,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!obj' is redundant or there is possible null pointer dereference: obj.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "builtin/unpack-objects.c",
+    "line_number": 413,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!blob' is redundant or there is possible null pointer dereference: blob.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "cache-tree.c",
+    "line_number": 375,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!sub' is redundant or there is possible null pointer dereference: sub.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "cache-tree.c",
+    "line_number": 378,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!sub' is redundant or there is possible null pointer dereference: sub.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "cache-tree.c",
+    "line_number": 946,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!sub' is redundant or there is possible null pointer dereference: sub.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "commit-graph.c",
+    "line_number": 835,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'g' is redundant or there is possible null pointer dereference: g.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "compat/nedmalloc/malloc.c.h",
+    "line_number": 5114,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: ms",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "daemon.c",
+    "line_number": 533,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!end' is redundant or there is possible null pointer dereference: end.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "daemon.c",
+    "line_number": 535,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!end' is redundant or there is possible null pointer dereference: end.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "daemon.c",
+    "line_number": 1219,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!group' is redundant or there is possible null pointer dereference: group.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "delta-islands.c",
+    "line_number": 287,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!tree' is redundant or there is possible null pointer dereference: tree.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "diff-lib.c",
+    "line_number": 306,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'new_file' is redundant or there is possible null pointer dereference: ce.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "diff-lib.c",
+    "line_number": 603,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!merge_bases' is redundant or there is possible null pointer dereference: merge_bases.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "diff-merges.c",
+    "line_number": 96,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!func' is redundant or there is possible null pointer dereference: func.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "diffcore-rename.c",
+    "line_number": 1672,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!dst' is redundant or there is possible null pointer dereference: dst.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "fetch-pack.c",
+    "line_number": 1605,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!found' is redundant or there is possible null pointer dereference: found.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "hook.c",
+    "line_number": 145,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!options' is redundant or there is possible null pointer dereference: options.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "http-backend.c",
+    "line_number": 766,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!method' is redundant or there is possible null pointer dereference: method.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "http-fetch.c",
+    "line_number": 64,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!preq' is redundant or there is possible null pointer dereference: preq.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "http-fetch.c",
+    "line_number": 65,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!preq' is redundant or there is possible null pointer dereference: preq.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "http-fetch.c",
+    "line_number": 66,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!preq' is redundant or there is possible null pointer dereference: preq.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "http-fetch.c",
+    "line_number": 68,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!preq' is redundant or there is possible null pointer dereference: preq.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "line-log.c",
+    "line_number": 680,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!a' is redundant or there is possible null pointer dereference: a.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "line-log.c",
+    "line_number": 689,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!a' is redundant or there is possible null pointer dereference: src.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "list-objects.c",
+    "line_number": 125,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!t' is redundant or there is possible null pointer dereference: t.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "list-objects.c",
+    "line_number": 139,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!b' is redundant or there is possible null pointer dereference: b.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "merge-recursive.c",
+    "line_number": 2135,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!collision_ent' is redundant or there is possible null pointer dereference: collision_ent.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "merge-recursive.c",
+    "line_number": 2755,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: ren1",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "midx.c",
+    "line_number": 1809,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'r->objects' is redundant or there is possible null pointer dereference: r->objects.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "merge-ort.c",
+    "line_number": 2251,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!c_info' is redundant or there is possible null pointer dereference: c_info.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "notes.c",
+    "line_number": 673,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'tws' is redundant or there is possible null pointer dereference: tws.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "object-file.c",
+    "line_number": 362,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'next_component' is redundant or there is possible null pointer dereference: next_component.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "object-file.c",
+    "line_number": 364,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'next_component' is redundant or there is possible null pointer dereference: next_component.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pack-bitmap.c",
+    "line_number": 2091,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: packs",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pack-bitmap.c",
+    "line_number": 2092,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: packs",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pack-bitmap.c",
+    "line_number": 2093,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: packs",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pack-bitmap.c",
+    "line_number": 2095,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: packs",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pack-bitmap.c",
+    "line_number": 2359,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!bitmap_git' is redundant or there is possible null pointer dereference: bitmap_git.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pager.c",
+    "line_number": 94,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!cp' is redundant or there is possible null pointer dereference: cp.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "progress.c",
+    "line_number": 358,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!p_progress' is redundant or there is possible null pointer dereference: p_progress.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pretty.c",
+    "line_number": 200,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!commit_format' is redundant or there is possible null pointer dereference: commit_format.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pretty.c",
+    "line_number": 201,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!commit_format' is redundant or there is possible null pointer dereference: commit_format.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "pretty.c",
+    "line_number": 202,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!commit_format' is redundant or there is possible null pointer dereference: commit_format.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "quote.c",
+    "line_number": 127,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'next' is redundant or there is possible null pointer dereference: src.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "reachable.c",
+    "line_number": 344,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!obj' is redundant or there is possible null pointer dereference: obj.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "refs.c",
+    "line_number": 2085,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!be' is redundant or there is possible null pointer dereference: be.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "refs/packed-backend.c",
+    "line_number": 1397,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: iter",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "refs/packed-backend.c",
+    "line_number": 1398,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: iter",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "reftable/block.c",
+    "line_number": 437,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'blockp' is redundant or there is possible null pointer dereference: blockp.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "remote-curl.c",
+    "line_number": 1103,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'heads' is redundant or there is possible null pointer dereference: heads.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "remote.c",
+    "line_number": 1103,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!dst_value' is redundant or there is possible null pointer dereference: pattern.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "setup.c",
+    "line_number": 1498,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!nongit_ok' is redundant or there is possible null pointer dereference: nongit_ok.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "sequencer.c",
+    "line_number": 1406,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!head' is redundant or there is possible null pointer dereference: head.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "sparse-index.c",
+    "line_number": 303,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!istate' is redundant or there is possible null pointer dereference: istate.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "submodule.c",
+    "line_number": 2296,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!sub' is redundant or there is possible null pointer dereference: sub.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "submodule.c",
+    "line_number": 2297,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!sub' is redundant or there is possible null pointer dereference: sub.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "submodule.c",
+    "line_number": 2374,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!sub' is redundant or there is possible null pointer dereference: sub.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "t/helper/test-bundle-uri.c",
+    "line_number": 91,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!remote' is redundant or there is possible null pointer dereference: remote.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "trace2/tr2_tgt_normal.c",
+    "line_number": 175,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'parent_names' is redundant or there is possible null pointer dereference: parent_names++.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "transport-helper.c",
+    "line_number": 1247,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!eov' is redundant or there is possible null pointer dereference: eov.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "transport.c",
+    "line_number": 964,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!transport->smart_options' is redundant or there is possible null pointer dereference: transport->smart_options.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "transport.c",
+    "line_number": 1124,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!remote' is redundant or there is possible null pointer dereference: remote.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "git-compat-util.h",
+    "line_number": 711,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!refname' is redundant or there is possible null pointer dereference: str++.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 393,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!object' is redundant or there is possible null pointer dereference: object.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 416,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!object' is redundant or there is possible null pointer dereference: object.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 429,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!object' is redundant or there is possible null pointer dereference: object.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 895,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!st' is redundant or there is possible null pointer dereference: st.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 896,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!st' is redundant or there is possible null pointer dereference: st.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 897,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!st' is redundant or there is possible null pointer dereference: st.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 898,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!st' is redundant or there is possible null pointer dereference: st.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 905,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!st' is redundant or there is possible null pointer dereference: st.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "revision.c",
+    "line_number": 1811,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!blob' is redundant or there is possible null pointer dereference: blob.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "tree-walk.c",
+    "line_number": 242,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!info' is redundant or there is possible null pointer dereference: info.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "tree-walk.c",
+    "line_number": 243,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!info' is redundant or there is possible null pointer dereference: info.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "tree-walk.c",
+    "line_number": 244,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!info' is redundant or there is possible null pointer dereference: info.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "upload-pack.c",
+    "line_number": 478,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!o' is redundant or there is possible null pointer dereference: o.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "upload-pack.c",
+    "line_number": 999,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!deepen_since' is redundant or there is possible null pointer dereference: deepen_since.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "unpack-trees.c",
+    "line_number": 2989,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'o' is redundant or there is possible null pointer dereference: o.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "xdiff-interface.c",
+    "line_number": 264,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!value' is redundant or there is possible null pointer dereference: value.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.44.0",
+    "project_version": "2.44.0",
+    "file_path": "xdiff-interface.c",
+    "line_number": 266,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!value' is redundant or there is possible null pointer dereference: value.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.46.0",
+    "project_version": "2.46.0",
+    "file_path": "builtin/branch.c",
+    "line_number": 944,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!branch' is redundant or there is possible null pointer dereference: branch.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.46.0",
+    "project_version": "2.46.0",
+    "file_path": "builtin/checkout.c",
+    "line_number": 834,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!tree' is redundant or there is possible null pointer dereference: tree.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.46.0",
+    "project_version": "2.46.0",
+    "file_path": "delta-islands.c",
+    "line_number": 289,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!tree' is redundant or there is possible null pointer dereference: tree.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.47.1",
+    "project_version": "2.47.1",
+    "file_path": "midx.c",
+    "line_number": 417,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'm' is redundant or there is possible null pointer dereference: m.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.47.1",
+    "project_version": "2.47.1",
+    "file_path": "midx.c",
+    "line_number": 435,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'm' is redundant or there is possible null pointer dereference: m.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.47.1",
+    "project_version": "2.47.1",
+    "file_path": "reftable/stack.c",
+    "line_number": 328,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: new_readers",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.47.1",
+    "project_version": "2.47.1",
+    "file_path": "repository.c",
+    "line_number": 112,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!repo->objects->odb' is redundant or there is possible null pointer dereference: repo->objects->odb.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.47.1",
+    "project_version": "2.47.1",
+    "file_path": "t/unit-tests/clar/clar.c",
+    "line_number": 744,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 's1' is redundant or there is possible null pointer dereference: s1.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.47.1",
+    "project_version": "2.47.1",
+    "file_path": "t/unit-tests/clar/clar.c",
+    "line_number": 762,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 's1' is redundant or there is possible null pointer dereference: s1.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.49.0",
+    "project_version": "2.49.0",
+    "file_path": "midx.c",
+    "line_number": 827,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'r->objects' is redundant or there is possible null pointer dereference: r->objects.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.49.0",
+    "project_version": "2.49.0",
+    "file_path": "packfile.c",
+    "line_number": 280,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'current' is redundant or there is possible null pointer dereference: current.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.49.0",
+    "project_version": "2.49.0",
+    "file_path": "path-walk.c",
+    "line_number": 227,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!list' is redundant or there is possible null pointer dereference: list.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.50.1",
+    "project_version": "2.50.1",
+    "file_path": "pack-revindex.c",
+    "line_number": 490,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'm' is redundant or there is possible null pointer dereference: m.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.50.1",
+    "project_version": "2.50.1",
+    "file_path": "path.c",
+    "line_number": 951,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'next_component' is redundant or there is possible null pointer dereference: next_component.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.50.1",
+    "project_version": "2.50.1",
+    "file_path": "path.c",
+    "line_number": 953,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'next_component' is redundant or there is possible null pointer dereference: next_component.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.50.1",
+    "project_version": "2.50.1",
+    "file_path": "reftable/blocksource.c",
+    "line_number": 18,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'data' is redundant or there is possible null pointer dereference: data.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "git",
+    "project_name_with_version": "git-2.50.1",
+    "project_version": "2.50.1",
+    "file_path": "reftable/stack.c",
+    "line_number": 432,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: new_tables",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "libuv",
+    "project_name_with_version": "libuv-1.46.0",
+    "project_version": "1.46.0",
+    "file_path": "src/unix/aix.c",
+    "line_number": 634,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!p' is redundant or there is possible null pointer dereference: p.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "libuv",
+    "project_name_with_version": "libuv-1.46.0",
+    "project_version": "1.46.0",
+    "file_path": "src/unix/os390.c",
+    "line_number": 186,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: (char*__ptr32*__ptr32*)0",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "libuv",
+    "project_name_with_version": "libuv-1.46.0",
+    "project_version": "1.46.0",
+    "file_path": "src/win/fs.c",
+    "line_number": 372,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: target_len_ptr",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/multibyte/mbstowcs.c",
+    "line_number": 6,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/multibyte/wcstombs.c",
+    "line_number": 6,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/multibyte/wcsnrtombs.c",
+    "line_number": 16,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stat/utimensat.c",
+    "line_number": 45,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: times",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stat/utimensat.c",
+    "line_number": 46,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: times",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stat/utimensat.c",
+    "line_number": 50,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: times",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stat/utimensat.c",
+    "line_number": 51,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: times",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stat/utimensat.c",
+    "line_number": 20,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: times",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stat/utimensat.c",
+    "line_number": 21,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: times",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stat/utimensat.c",
+    "line_number": 22,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: times",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stat/utimensat.c",
+    "line_number": 23,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference: times",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stdio/fputws.c",
+    "line_number": 16,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/stdio/vswscanf.c",
+    "line_number": 11,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.1.24",
+    "project_version": "1.1.24",
+    "file_path": "src/thread/mtx_lock.c",
+    "line_number": 11,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Null pointer dereference",
+    "severity": "error"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "musl",
+    "project_name_with_version": "musl-1.2.1",
+    "project_version": "1.2.1",
+    "file_path": "src/network/recvmsg.c",
+    "line_number": 53,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'msg' is redundant or there is possible null pointer dereference: msg.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "nginx",
+    "project_name_with_version": "nginx-1.25.4",
+    "project_version": "1.25.4",
+    "file_path": "src/event/ngx_event_pipe.c",
+    "line_number": 674,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: ll",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "nginx",
+    "project_name_with_version": "nginx-1.25.4",
+    "project_version": "1.25.4",
+    "file_path": "src/event/quic/ngx_event_quic_frames.c",
+    "line_number": 619,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'in' is redundant or there is possible null pointer dereference: in.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "nginx",
+    "project_name_with_version": "nginx-1.25.4",
+    "project_version": "1.25.4",
+    "file_path": "src/os/unix/ngx_readv_chain.c",
+    "line_number": 122,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: iov",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "openssl",
+    "project_name_with_version": "openssl-3.2.1",
+    "project_version": "3.2.1",
+    "file_path": "crypto/ec/ecp_sm2p256.c",
+    "line_number": 449,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'new_generator[0]!=NULL' is redundant or there is possible null pointer dereference: generator.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "openssl",
+    "project_name_with_version": "openssl-3.2.1",
+    "project_version": "3.2.1",
+    "file_path": "providers/implementations/ciphers/cipher_aes_gcm_hw.c",
+    "line_number": 64,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'ctx' is redundant or there is possible null pointer dereference: ctx.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "openssl",
+    "project_name_with_version": "openssl-3.2.1",
+    "project_version": "3.2.1",
+    "file_path": "providers/implementations/ciphers/cipher_aes_gcm_hw.c",
+    "line_number": 65,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'ctx' is redundant or there is possible null pointer dereference: ctx.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "openssl",
+    "project_name_with_version": "openssl-3.2.1",
+    "project_version": "3.2.1",
+    "file_path": "providers/implementations/ciphers/cipher_aes_gcm_hw.c",
+    "line_number": 83,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'ctx' is redundant or there is possible null pointer dereference: ctx.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "openssl",
+    "project_name_with_version": "openssl-3.2.1",
+    "project_version": "3.2.1",
+    "file_path": "providers/implementations/macs/hmac_prov.c",
+    "line_number": 153,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'key!=NULL' is redundant or there is possible null pointer dereference: key.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "openssl",
+    "project_name_with_version": "openssl-3.5.1",
+    "project_version": "3.5.1",
+    "file_path": "providers/implementations/encode_decode/ml_kem_codecs.c",
+    "line_number": 292,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'out!=NULL' is redundant or there is possible null pointer dereference: out.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "openssl",
+    "project_name_with_version": "openssl-3.5.1",
+    "project_version": "3.5.1",
+    "file_path": "ssl/quic/quic_reactor_wait_ctx.c",
+    "line_number": 49,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'slot==NULL' is redundant or there is possible null pointer dereference: slot.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 359,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 362,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 363,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 364,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 365,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 366,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 367,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 368,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 369,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 370,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 371,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lparser.c",
+    "line_number": 376,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'fs' is redundant or there is possible null pointer dereference: fs.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "deps/lua/src/lvm.c",
+    "line_number": 679,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(pstep=luaV_tonumber(pstep,ra+2))!=NULL' is redundant or there is possible null pointer dereference: pstep.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "src/ae.c",
+    "line_number": 272,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: earliest",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "src/listpack.c",
+    "line_number": 746,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'p' is redundant or there is possible null pointer dereference: p.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "src/redis-cli.c",
+    "line_number": 4756,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: node",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.0.11",
+    "project_version": "7.0.11",
+    "file_path": "src/redis-cli.c",
+    "line_number": 6988,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '!table' is redundant or there is possible null pointer dereference: table.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.2.1",
+    "project_version": "7.2.1",
+    "file_path": "deps/jemalloc/src/ctl.c",
+    "line_number": 2467,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'oldlenp==NULL' is redundant or there is possible null pointer dereference: oldlenp.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "redis",
+    "project_name_with_version": "redis-7.2.1",
+    "project_version": "7.2.1",
+    "file_path": "deps/jemalloc/src/ctl.c",
+    "line_number": 4273,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'oldlenp==NULL' is redundant or there is possible null pointer dereference: oldlenp.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.0",
+    "project_version": "3.0",
+    "file_path": "cmd-display-message.c",
+    "line_number": 108,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'item!=NULL' is redundant or there is possible null pointer dereference: item.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.0",
+    "project_version": "3.0",
+    "file_path": "cmd-find.c",
+    "line_number": 1293,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: item",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.0",
+    "project_version": "3.0",
+    "file_path": "cmd-find.c",
+    "line_number": 1297,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: item",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.0",
+    "project_version": "3.0",
+    "file_path": "options.c",
+    "line_number": 106,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'o==NULL' is redundant or there is possible null pointer dereference: o.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.0",
+    "project_version": "3.0",
+    "file_path": "options.c",
+    "line_number": 613,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'o==NULL' is redundant or there is possible null pointer dereference: o.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.0",
+    "project_version": "3.0",
+    "file_path": "options.c",
+    "line_number": 626,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'o==NULL' is redundant or there is possible null pointer dereference: o.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.0",
+    "project_version": "3.0",
+    "file_path": "options.c",
+    "line_number": 639,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'o==NULL' is redundant or there is possible null pointer dereference: o.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "client.c",
+    "line_number": 559,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(&client_files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "client.c",
+    "line_number": 561,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(&client_files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "client.c",
+    "line_number": 577,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(&client_files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "client.c",
+    "line_number": 579,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(&client_files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "cmd-show-options.c",
+    "line_number": 208,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'oe!=NULL' is redundant or there is possible null pointer dereference: oe.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "cmd-show-options.c",
+    "line_number": 209,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'oe!=NULL' is redundant or there is possible null pointer dereference: oe.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "cmd-switch-client.c",
+    "line_number": 76,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'wl!=NULL' is redundant or there is possible null pointer dereference: wl.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "window-tree.c",
+    "line_number": 420,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: l",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.1",
+    "project_version": "3.1",
+    "file_path": "window-tree.c",
+    "line_number": 466,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: l",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "file.c",
+    "line_number": 611,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "file.c",
+    "line_number": 613,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "file.c",
+    "line_number": 630,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "file.c",
+    "line_number": 632,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "window-customize.c",
+    "line_number": 962,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'item==NULL' is redundant or there is possible null pointer dereference: item.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "window-customize.c",
+    "line_number": 965,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'item==NULL' is redundant or there is possible null pointer dereference: item.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "window-customize.c",
+    "line_number": 966,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'item==NULL' is redundant or there is possible null pointer dereference: item.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "window-customize.c",
+    "line_number": 968,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'item==NULL' is redundant or there is possible null pointer dereference: item.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "window-customize.c",
+    "line_number": 1016,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'item==NULL' is redundant or there is possible null pointer dereference: item.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "window-customize.c",
+    "line_number": 1019,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'item==NULL' is redundant or there is possible null pointer dereference: item.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.2",
+    "project_version": "3.2",
+    "file_path": "window-customize.c",
+    "line_number": 1241,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'item==NULL' is redundant or there is possible null pointer dereference: item.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 38,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: elm.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 131,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 670,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 672,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 674,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 676,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 677,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 678,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "tmux",
+    "project_name_with_version": "tmux-3.4",
+    "project_version": "3.4",
+    "file_path": "file.c",
+    "line_number": 791,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(cf=client_files_RB_FIND(files,&find))==NULL' is redundant or there is possible null pointer dereference: cf.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.0550",
+    "project_version": "9.1.0550",
+    "file_path": "src/autocmd.c",
+    "line_number": 963,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: eap",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.0550",
+    "project_version": "9.1.0550",
+    "file_path": "src/edit.c",
+    "line_number": 2931,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: last_ptr",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.0550",
+    "project_version": "9.1.0550",
+    "file_path": "src/gui_gtk.c",
+    "line_number": 723,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'parent==NULL' is redundant or there is possible null pointer dereference: parent.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.0550",
+    "project_version": "9.1.0550",
+    "file_path": "src/main.c",
+    "line_number": 1646,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(tp)==NULL' is redundant or there is possible null pointer dereference: tp.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.0550",
+    "project_version": "9.1.0550",
+    "file_path": "src/move.c",
+    "line_number": 3320,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: curwin",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.0550",
+    "project_version": "9.1.0550",
+    "file_path": "src/vim9instr.c",
+    "line_number": 445,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: type1",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.0550",
+    "project_version": "9.1.0550",
+    "file_path": "src/vim9instr.c",
+    "line_number": 446,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointer",
+    "message": "Possible null pointer dereference: type2",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.1040",
+    "project_version": "9.1.1040",
+    "file_path": "src/diff.c",
+    "line_number": 2160,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition 'dp' is redundant or there is possible null pointer dereference: dp.",
+    "severity": "warning"
+  },
+  {
+    "tool_name": "cppcheck",
+    "project_name": "vim",
+    "project_name_with_version": "vim-9.1.1591",
+    "project_version": "9.1.1591",
+    "file_path": "src/gui.c",
+    "line_number": 3816,
+    "cwe": [
+      "CWE-476"
+    ],
+    "rule_id": "nullPointerRedundantCheck",
+    "message": "Either the condition '(tp)==NULL' is redundant or there is possible null pointer dereference: tp.",
+    "severity": "warning"
+  }
+]

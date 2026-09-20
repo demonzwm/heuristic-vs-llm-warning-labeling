@@ -1,0 +1,12 @@
+{
+  "candidates": 186,
+  "final_tp": 102,
+  "final_fp": 84,
+  "correct_tp_to_fp": 78,
+  "harmful_tp_to_fp": 6,
+  "revision_precision": 0.928571,
+  "stage1_correct_tp": 28,
+  "preserved_tp": 22,
+  "lost_tp": 6,
+  "tp_preservation_rate": 0.785714
+}

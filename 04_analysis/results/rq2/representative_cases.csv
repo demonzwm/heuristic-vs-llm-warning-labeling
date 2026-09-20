@@ -1,0 +1,754 @@
+warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_label,gpt_label,category
+2,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+3,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+5,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+6,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+8,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+10,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+11,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT correct
+13,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+14,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+15,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,FP,all three incorrect
+16,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+17,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+18,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+20,CodeQL,cpp/use-after-free,CWE-416,FP,FP,FP,FP,all three correct
+21,CodeQL,cpp/use-after-free,CWE-416,FP,FP,FP,FP,all three correct
+22,CodeQL,cpp/use-after-free,CWE-416,FP,FP,FP,FP,all three correct
+23,CodeQL,cpp/use-after-free,CWE-416,FP,FP,FP,FP,all three correct
+24,CodeQL,cpp/use-after-free,CWE-416,FP,FP,FP,FP,all three correct
+25,CodeQL,cpp/use-after-free,CWE-416,FP,FP,FP,FP,all three correct
+26,CodeQL,cpp/use-after-free,CWE-416,FP,FP,FP,FP,all three correct
+27,CodeQL,cpp/redundant-null-check-simple,CWE-476,FP,FP,FP,FP,all three correct
+28,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+29,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+31,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,FP,all three incorrect
+33,CodeQL,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all three correct
+34,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+35,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+36,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,FP,only DeepSeek correct
+37,CodeQL,cpp/unterminated-variadic-call,CWE-121,FP,FP,FP,FP,all three correct
+38,CodeQL,cpp/unterminated-variadic-call,CWE-121,FP,FP,FP,FP,all three correct
+39,CodeQL,cpp/unterminated-variadic-call,CWE-121,FP,FP,FP,FP,all three correct
+41,CodeQL,cpp/unterminated-variadic-call,CWE-121,FP,FP,FP,FP,all three correct
+42,CodeQL,cpp/unterminated-variadic-call,CWE-121,FP,FP,FP,FP,all three correct
+43,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+44,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+45,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+46,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+47,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+48,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+50,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+51,CodeQL,cpp/redundant-null-check-simple,CWE-476,FP,FP,FP,FP,all three correct
+52,CodeQL,cpp/no-space-for-terminator,CWE-122; CWE-120; CWE-131,FP,FP,FP,FP,all three correct
+53,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+54,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+55,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+56,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+57,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+59,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+60,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+61,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+62,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+63,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+64,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+65,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+66,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+67,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,TP,FP,FP,only heuristic correct
+69,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+70,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+71,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only heuristic correct
+72,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,FP,all three incorrect
+74,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only heuristic correct
+76,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+79,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+80,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+81,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+82,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+83,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+84,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+85,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+86,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+87,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+88,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+89,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+90,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+91,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+93,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+95,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+96,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+98,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+99,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+100,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+101,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+102,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+103,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+104,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+105,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+106,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+107,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+108,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+109,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+110,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,TP,TP,TP,all three incorrect
+112,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+113,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+114,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+115,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+116,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+117,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+118,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+119,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+120,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+121,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+122,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+123,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+124,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+125,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+126,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+128,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+129,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+130,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+131,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+132,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+133,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+135,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+136,CodeQL,cpp/redundant-null-check-simple,CWE-476,FP,FP,FP,FP,all three correct
+137,CodeQL,cpp/redundant-null-check-simple,CWE-476,FP,FP,FP,FP,all three correct
+138,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+139,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+140,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+141,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+142,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+143,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT correct
+144,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+145,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+146,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+147,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+148,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+149,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+150,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+152,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+153,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+154,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,FP,all three incorrect
+155,CodeQL,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all three correct
+157,CodeQL,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,FP,FP,FP,all three incorrect
+158,CodeQL,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all three correct
+160,CodeQL,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all three correct
+161,CodeQL,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all three correct
+162,CodeQL,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,FP,FP,all three incorrect
+163,CodeQL,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,FP,only DeepSeek correct
+164,CodeQL,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,FP,FP,all three incorrect
+166,CodeQL,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,FP,only DeepSeek correct
+167,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+169,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+171,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+173,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+174,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+175,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+177,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+178,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+179,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+180,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+181,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+185,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+190,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+193,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+194,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+195,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+197,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+202,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+204,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+205,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+210,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+211,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+213,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+214,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+215,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+216,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+220,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+222,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+223,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+224,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+225,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+226,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+235,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+238,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,FP,only DeepSeek correct
+240,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+241,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+242,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+244,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+246,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+248,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+249,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+250,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+253,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+255,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+256,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+259,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+260,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+261,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+264,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+265,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+268,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+270,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+271,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+272,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+273,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+274,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+275,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+276,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+277,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+278,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+282,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+283,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+285,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+288,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+292,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+293,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+295,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+296,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+297,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+298,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+299,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+300,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+301,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+302,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+303,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+305,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+306,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+308,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+309,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+310,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+311,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+312,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+315,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+316,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+317,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+318,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+319,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+321,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+325,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+326,CodeQL,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all three correct
+328,CodeQL,cpp/inconsistent-null-check,CWE-476,TP,TP,FP,FP,only heuristic correct
+329,CodeQL,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,TP,FP,FP,only heuristic correct
+333,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT correct
+334,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,TP,all three incorrect
+335,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT correct
+336,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek correct
+337,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT correct
+338,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT correct
+339,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek correct
+341,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,TP,TP,TP,all three correct
+342,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,TP,TP,TP,all three correct
+343,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek correct
+345,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,TP,TP,TP,all three correct
+347,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek correct
+348,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT correct
+349,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek correct
+350,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek correct
+354,CodeQL,cpp/suspicious-allocation-size,CWE-122; CWE-131,FP,FP,FP,FP,all three correct
+355,CodeQL,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all three correct
+356,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+357,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+359,CodeQL,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all three correct
+360,CodeQL,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all three correct
+363,CodeQL,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all three correct
+364,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+367,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+368,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+369,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+370,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+372,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+374,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+375,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+376,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+377,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+378,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+379,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+380,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+381,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+382,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+383,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+384,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+386,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+387,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+388,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+389,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+390,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+392,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+393,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+395,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+396,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+397,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+398,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+399,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+400,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+401,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+402,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+403,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+404,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+405,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT correct
+406,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+407,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+408,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+409,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+410,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+412,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+413,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+414,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+415,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+416,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+417,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+419,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+420,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+421,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+422,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+423,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+424,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+425,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+426,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+427,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+428,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+429,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+430,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+431,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+432,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+435,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+436,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+437,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+438,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+439,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+440,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT correct
+441,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+442,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+443,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+444,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+445,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+446,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+447,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+448,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+449,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+451,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+452,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+453,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+454,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+456,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+457,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+458,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+459,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+461,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+462,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+463,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+464,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+466,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+467,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT correct
+469,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+470,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+471,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+473,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+474,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+475,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+476,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+477,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+479,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+480,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+481,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+482,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+483,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+484,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+485,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+486,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+487,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+488,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+489,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+490,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+491,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+492,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+493,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+494,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+495,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+496,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+497,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+498,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+499,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+500,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+502,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+503,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+504,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+505,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+506,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+507,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+508,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+510,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+511,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+512,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+513,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+514,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+515,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+516,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+517,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+518,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+520,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+521,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+522,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+523,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+524,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+525,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+526,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+527,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+528,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+530,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,FP,FP,all three incorrect
+531,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+532,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+533,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+535,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+536,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+537,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+538,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+539,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+540,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+541,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+542,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+543,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+544,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+547,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+549,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+550,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+551,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+552,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+553,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+554,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+555,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+556,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+558,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+559,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+560,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+561,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+562,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+565,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+566,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+567,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+568,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+569,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+570,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+572,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+573,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+574,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+575,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+576,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+577,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+578,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+580,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+581,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+582,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+583,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+584,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+585,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+586,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+587,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+588,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+589,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+590,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+591,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+592,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+593,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+594,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+595,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+596,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+597,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+598,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+599,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+600,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+601,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+602,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+603,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+606,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+607,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+608,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+609,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+610,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+611,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+612,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+613,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+614,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+615,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+616,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,FP,FP,all three incorrect
+618,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+619,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+621,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+622,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+623,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+624,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+625,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+626,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+627,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+628,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT correct
+629,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,FP,FP,all three incorrect
+630,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT correct
+631,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+633,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+634,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+635,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+636,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+640,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+642,Clang Static Analyzer,Dereference of null pointer,CWE-476,TP,TP,FP,FP,only heuristic correct
+646,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+647,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
+648,Clang Static Analyzer,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all three correct
+650,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+651,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+653,Cppcheck,nullPointerRedundantCheck,CWE-476,TP,TP,FP,FP,only heuristic correct
+655,Cppcheck,nullPointer,CWE-476,TP,TP,FP,FP,only heuristic correct
+656,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,TP,FP,only GPT correct
+659,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+660,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+661,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+662,Cppcheck,nullPointer,CWE-476,TP,FP,TP,FP,only DeepSeek correct
+664,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,TP,TP,all three incorrect
+666,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+667,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+668,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+669,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+676,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+677,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+678,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+679,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+680,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+681,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+682,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+683,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+685,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+687,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+688,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+691,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek correct
+692,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+694,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+698,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+699,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+700,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+701,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+702,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+703,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+704,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+705,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+707,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+708,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+709,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+710,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+711,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+712,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+715,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+718,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+719,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+720,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+722,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+724,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+725,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+727,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+729,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+730,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+731,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+732,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+733,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+734,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+735,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+736,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+738,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+739,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+740,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+741,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+742,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+743,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+744,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+745,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+746,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+747,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+748,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+749,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+750,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+751,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+752,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+753,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+754,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+755,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+756,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+757,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+758,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+763,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+764,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+765,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+766,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+767,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+768,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+769,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+770,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+771,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+772,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+773,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+774,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+775,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+776,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+778,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+779,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+780,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+781,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+782,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+783,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+784,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+785,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+786,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+787,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+788,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+789,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+790,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+791,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+792,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+793,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+794,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+797,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+798,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+799,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+801,Cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek correct
+806,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+807,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek correct
+809,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek correct
+811,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+812,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+813,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+814,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+817,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+819,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+820,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+823,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+828,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+831,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+832,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+834,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+835,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+836,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+837,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+841,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+842,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+843,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+845,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+846,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+847,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+849,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+854,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+857,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+859,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+863,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+864,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+865,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+866,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+867,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+868,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+871,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+872,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+874,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+876,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+877,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+878,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+879,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+880,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+881,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+882,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+883,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+884,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+885,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+886,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+887,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+888,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+889,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+890,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+891,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+892,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+895,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+896,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+897,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,TP,FP,only GPT correct
+898,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+899,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+900,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+903,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+904,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+906,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+910,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+912,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+913,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+915,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+917,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+919,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+920,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+921,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+924,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+925,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+926,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+927,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+928,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+929,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+930,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+931,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+933,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+934,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+936,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+937,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+940,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+941,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+942,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+945,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+946,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+947,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+948,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+949,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+950,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+951,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+952,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+954,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+955,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+956,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+957,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+958,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+959,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+960,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+961,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+964,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+965,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+967,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+968,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+972,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+974,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+976,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+977,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+978,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+979,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+980,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+981,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+986,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+988,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+989,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+992,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+994,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+996,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek correct
+998,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+999,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+1000,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+1001,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1002,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1003,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1005,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1006,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1007,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1008,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+1011,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1012,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1013,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1015,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1018,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1020,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+1021,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+1022,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1024,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+1025,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+1026,Cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all three correct
+1027,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct
+1028,Cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all three correct

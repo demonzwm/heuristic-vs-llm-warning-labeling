@@ -1,0 +1,7 @@
+category,count
+all three correct,623
+all three incorrect,13
+mixed partial agreement,274
+only DeepSeek correct,27
+only GPT correct,14
+only heuristic correct,76

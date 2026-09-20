@@ -1,0 +1,25 @@
+{
+  "routing": {
+    "agreement": 781,
+    "disagreement": 246,
+    "branch_a": 196,
+    "branch_b": 50
+  },
+  "branch_a": {
+    "candidate_count": 196,
+    "correct_tp_to_fp_revisions": 115,
+    "harmful_tp_to_fp_revisions": 3,
+    "revision_precision": 0.974576,
+    "tp_preservation": 0.785714
+  },
+  "branch_b": {
+    "candidate_count": 50,
+    "correct_fp_to_tp_revisions": 0,
+    "harmful_fp_to_tp_revisions": 0,
+    "revision_precision": null,
+    "fn_recovery": 0.0,
+    "fp_preservation": 1.0
+  },
+  "agreement_accuracy": 0.950064,
+  "disagreement_accuracy": 0.686992
+}
