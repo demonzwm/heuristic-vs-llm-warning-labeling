@@ -1,6 +1,6 @@
 # Generic Fallback Schema
 
-Use this schema for disagreement warnings outside the dedicated CWE-476 / CWE-787 coverage.
+Use this schema for warnings outside the dedicated CWE-476 / CWE-787 coverage.
 
 Procedure:
 1. Identify the warning-specific defect condition.

@@ -1,6 +1,6 @@
 # CWE-476 Reasoning Schema
 
-This schema is used for disagreement-triggered verification of null-dereference style warnings.
+This schema is used for verification of null-dereference style warnings.
 
 Core predicates:
 1. `NULL_SOURCE`

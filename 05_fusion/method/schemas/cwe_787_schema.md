@@ -1,6 +1,6 @@
 # CWE-787 Reasoning Schema
 
-This schema is used for disagreement-triggered verification of out-of-bounds / unbounded-write warnings.
+This schema is used for verification of out-of-bounds / unbounded-write warnings.
 
 Core predicates:
 1. `WRITE_OPERATION`

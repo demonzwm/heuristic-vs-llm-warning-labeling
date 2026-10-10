@@ -1,27 +1,14 @@
-# Final Comparison Dataset Schema
+# Comparison dataset fields
 
-The formal comparison dataset contains one object per warning and integrates benchmark metadata with the final method outputs used for paper analysis.
+The original benchmark warning fields are retained. Evaluation fields are:
 
-## Top-level fields
+| Field | Meaning |
+|---|---|
+| `ground_truth_label` | Released human TP/FP label |
+| `heuristic_label` | A prediction |
+| `deepseek_baseline_label` | DeepSeek B prediction |
+| `gpt_baseline_label` | GPT-6 Luna B prediction |
+| `deepseek_fusion_label` | DeepSeek C prediction |
+| `gpt_fusion_label` | GPT-6 Luna C prediction |
 
-- `warning_info`
-  Benchmark-side warning metadata copied from the formal benchmark.
-
-- `heuristic_based_labeling`
-  Formal heuristic prediction object.
-
-- `llm_based_labeling`
-  Object containing:
-  - `deepseek`
-  - `gpt`
-
-- `manual_annotation`
-  Ground-truth annotation object.
-
-## Usage
-
-This file is intended for:
-
-- RQ1 overall / SCA / rule / CWE comparison,
-- RQ2 agreement / disagreement analysis,
-- downstream paper tables that require aligned predictions from all formal approaches.
+All six labels are binary TP/FP. `warning_id` is unique across 1,027 rows.

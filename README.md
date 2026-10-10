@@ -1,34 +1,35 @@
-# Heuristic vs LLM Warning Validation Artifact
+# Static-Analysis Warning Validation: Paper Artifact
 
-This repository is the paper artifact for comparing cross-version warning matching, LLM baselines, and the final two-stage fusion strategy. It contains artifact scripts, prompts, frozen inputs, predictions, and evaluation outputs. It does not contain the analyzed upstream project source trees.
+This directory contains the single paper release for 1,027 warnings. The three
+methods are A (cross-version heuristic), B (code-slice LLM baseline), and C
+(two-stage semantic and warning-evolution verification). C sends **every**
+warning to Stage 2. TP is the positive class.
 
-## Directory Map
+The selected ground truth contains 54 TP and 973 FP. A's archived predictions
+are unchanged. DeepSeek-v4-flash and GPT-6 Luna each have their own B and C
+predictions; comparisons use the same model within each pair. GPT-6 Luna used
+low reasoning effort. No API call is needed to inspect or rebuild this release.
 
-- `01_dataset/`: raw and processed warning datasets, including the original GitHub warning corpus and the 1,027-warning benchmark.
-- `02_heuristic/`: cross-version warning matching scripts and heuristic labels.
-- `03_llm/`: LLM baseline prompts, runners, and completed DeepSeek/GPT baseline predictions.
-- `04_analysis/`: ground truth, paper analysis scripts, RQ1/RQ2 result tables, and figures directory.
-- `05_fusion/`: self-contained final fusion method inputs, unified Stage 1 output, prompts, knowledge, schemas, runners, predictions, and fusion analysis.
+## Directory map
 
-## Reproduction Order
+- `01_dataset/`: benchmark warnings and source warning data.
+- `02_heuristic/`: A matching algorithm and its 1,027 predictions.
+- `03_llm/`: B prompts, exact GPT prompt snapshots, and model predictions.
+- `04_analysis/`: one GT, the A/B/C comparison dataset, RQ1/RQ2 tables, and rebuild script.
+- `05_fusion/`: C's per-model Stage 1, all-warning Stage 2 inputs, verification outputs, and analysis.
+- `ARTIFACT_MANIFEST.json`: model settings and hashes of released JSON artifacts.
 
-1. Build or inspect the benchmark data with `01_dataset/scripts/`.
-2. Run cross-version matching with `02_heuristic/scripts/` to produce `02_heuristic/results/heuristic_labels_1027.json`.
-3. Run LLM baselines from `03_llm/scripts/deepseek/` or `03_llm/scripts/gpt/run_gpt_baseline.py`.
-4. Rebuild paper analysis tables with `python 04_analysis/scripts/build_final_paper_sync.py`.
-5. Validate fusion material with `python 05_fusion/method/scripts/prepare_fusion_materials.py --preflight`.
-6. Validate executable fusion runners with `python 05_fusion/method/scripts/run_deepseek_fusion.py --preflight` and `python 05_fusion/method/scripts/run_gpt_fusion.py --preflight`.
-7. Summarize completed fusion runs with `python 05_fusion/analysis/scripts/summarize_fusion_results.py`.
+## Offline validation and rebuild
 
-The fusion runners are executable. `--preflight` performs local checks only. `--execute` calls the configured model API and writes local runtime byproducts under ignored runtime directories.
+```powershell
+python 03_llm/scripts/gpt/validate_gpt_baseline.py
+python 05_fusion/method/scripts/validate_fusion_release.py
+python 04_analysis/scripts/build_final_paper_sync.py
+```
 
-## Included Artifacts
+The final command rebuilds the comparison dataset and all reported RQ1, RQ2,
+and C summary tables from the one GT and frozen predictions. GT is read only
+by the evaluation script, never by model input preparation.
 
-- Included: cppcheck raw warning corpus, processed benchmark files, heuristic labels, LLM baseline predictions, fusion inference input, unified Stage 1 output, fusion prompts/knowledge/schemas, fusion runners, fusion prediction results, ground truth labels, and evaluation tables.
-- Not included: upstream project source checkouts, CodeQL raw databases, Clang Static Analyzer raw project inputs, local API caches, logs, checkpoints, and virtual environments.
-
-## Environment
-
-Copy `.env.example` locally if API execution is needed. Do not commit real keys.
-
-Non-Python tooling used by data construction includes Joern/PDG tooling and Tree-sitter style parsing utilities where referenced by context extraction scripts; exact local versions were not recoverable from the artifact and are therefore not pinned here.
+Model prompts and predictions are preserved from the completed runs. This
+release does not include API keys or upstream repository source checkouts.

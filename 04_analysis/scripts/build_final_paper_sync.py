@@ -1,240 +1,150 @@
-from __future__ import annotations
-
+"""Build all paper tables from the released GT and frozen A/B/C predictions."""
 import csv
 import json
-import re
 from collections import Counter
 from pathlib import Path
-from typing import Any
+
+ROOT = Path(__file__).resolve().parents[2]
+RESULTS = ROOT / "04_analysis/results"
+FUSION = ROOT / "05_fusion"
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-BENCHMARK_PATH = REPO_ROOT / "01_dataset" / "processed" / "benchmark" / "benchmark_warnings_1027.json"
-GROUND_TRUTH_PATH = REPO_ROOT / "04_analysis" / "ground_truth" / "ground_truth_labels_1027.json"
-HEURISTIC_PATH = REPO_ROOT / "02_heuristic" / "results" / "heuristic_labels_1027.json"
-DEEPSEEK_PATH = REPO_ROOT / "03_llm" / "deepseek" / "results" / "deepseek_v4_flash_semantic_baseline_1027.json"
-GPT_PATH = REPO_ROOT / "03_llm" / "gpt" / "results" / "gpt_ouol_1027.json"
-
-RESULTS_DIR = REPO_ROOT / "04_analysis" / "results"
-FINAL_DATASET_PATH = RESULTS_DIR / "final_dataset" / "final_comparison_dataset_1027.json"
-RQ1_DIR = RESULTS_DIR / "rq1"
-RQ2_DIR = RESULTS_DIR / "rq2"
+def read(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def load_json(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8-sig"), strict=False)
-
-
-def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
+def save(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def table(path, rows):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
 
 
-def norm_label(value: Any) -> str:
-    label = str(value or "").strip().upper()
-    if label not in {"TP", "FP"}:
-        raise ValueError(f"Invalid TP/FP label: {value!r}")
-    return label
+def mapping(path, id_fn, label_fn):
+    data = read(path)
+    result = {int(id_fn(x)): label_fn(x) for x in data}
+    assert len(data) == len(result) == 1027 and set(result.values()) <= {"TP", "FP"}, path
+    return result
 
 
-def norm_tool(value: Any) -> str:
-    text = str(value or "").strip().lower()
-    return {
-        "codeql": "CodeQL",
-        "cppcheck": "Cppcheck",
-        "csa": "Clang Static Analyzer",
-        "clang static analyzer": "Clang Static Analyzer",
-    }.get(text, str(value or ""))
+def score(rows, field):
+    c = Counter((r["ground_truth_label"], r[field]) for r in rows)
+    tp, fp, fn, tn = c["TP", "TP"], c["FP", "TP"], c["TP", "FP"], c["FP", "FP"]
+    p = tp / (tp + fp) if tp + fp else 0
+    recall = tp / (tp + fn) if tp + fn else 0
+    f1 = 2 * p * recall / (p + recall) if p + recall else 0
+    return {"TP": tp, "FP": fp, "FN": fn, "TN": tn, "Precision": round(p, 6),
+            "Recall": round(recall, 6), "F1": round(f1, 6),
+            "Accuracy": round((tp + tn) / len(rows), 6)}
 
 
-def cwe_list(value: Any) -> list[str]:
-    if isinstance(value, list):
-        return [str(item).strip() for item in value if str(item).strip()]
-    if value is None:
-        return []
-    return [part.strip() for part in str(value).replace(",", ";").split(";") if part.strip()]
+def cwes(raw):
+    return [str(x) for x in raw] if isinstance(raw, list) else [
+        x.strip() for x in str(raw or "").replace(",", ";").split(";") if x.strip()]
 
 
-def confusion(rows: list[dict[str, Any]], pred_key: str) -> dict[str, Any]:
-    tp = sum(1 for row in rows if row["ground_truth_label"] == "TP" and row[pred_key] == "TP")
-    fp = sum(1 for row in rows if row["ground_truth_label"] == "FP" and row[pred_key] == "TP")
-    tn = sum(1 for row in rows if row["ground_truth_label"] == "FP" and row[pred_key] == "FP")
-    fn = sum(1 for row in rows if row["ground_truth_label"] == "TP" and row[pred_key] == "FP")
-    precision = tp / (tp + fp) if tp + fp else 0.0
-    recall = tp / (tp + fn) if tp + fn else 0.0
-    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
-    accuracy = (tp + tn) / len(rows) if rows else 0.0
-    return {
-        "TP": tp,
-        "FP": fp,
-        "TN": tn,
-        "FN": fn,
-        "Precision": round(precision, 6),
-        "Recall": round(recall, 6),
-        "F1": round(f1, 6),
-        "Accuracy": round(accuracy, 6),
-    }
-
-
-def deepseek_label_map() -> dict[int, str]:
-    text = DEEPSEEK_PATH.read_text(encoding="utf-8-sig", errors="replace")
-    pattern = re.compile(r'"warning_id"\s*:\s*(\d+).*?"llm_based_labeling"\s*:\s*\{.*?"deepseek"\s*:\s*\{.*?"label"\s*:\s*"(TP|FP)"', re.S)
-    labels = {int(match.group(1)): match.group(2) for match in pattern.finditer(text)}
-    if len(labels) != 1027:
-        raise RuntimeError(f"Expected 1027 DeepSeek labels, extracted {len(labels)}")
-    return labels
-
-
-def gpt_label_map() -> dict[int, str]:
-    rows = load_json(GPT_PATH)
-    labels: dict[int, str] = {}
-    for row in rows:
-        warning_id = int(row["warning_info"]["warning_id"])
-        labels[warning_id] = norm_label(row["llm_based_labeling"]["gpt"]["label"])
-    return labels
-
-
-def build_final_rows() -> list[dict[str, Any]]:
-    benchmark = load_json(BENCHMARK_PATH)
-    gt = {int(row["warning_id"]): norm_label(row["ground_truth_label"]) for row in load_json(GROUND_TRUTH_PATH)}
-    heuristic = {}
-    for row in load_json(HEURISTIC_PATH):
-        warning_id = int(row.get("warning_id", row.get("warning_info", {}).get("warning_id")))
-        label = row.get("heuristic_label") or row.get("heuristic_based_labeling", {}).get("label")
-        heuristic[warning_id] = norm_label(label)
-    deepseek = deepseek_label_map()
-    gpt = gpt_label_map()
-    rows: list[dict[str, Any]] = []
-    for row in benchmark:
-        warning_id = int(row["warning_id"])
-        rows.append(
-            {
-                **row,
-                "ground_truth_label": gt[warning_id],
-                "heuristic_label": heuristic[warning_id],
-                "deepseek_label": deepseek[warning_id],
-                "gpt_label": gpt[warning_id],
-            }
-        )
-    if len(rows) != 1027:
-        raise RuntimeError(f"Expected 1027 final rows, built {len(rows)}")
-    return rows
-
-
-def write_final_dataset(rows: list[dict[str, Any]]) -> None:
-    FINAL_DATASET_PATH.parent.mkdir(parents=True, exist_ok=True)
-    FINAL_DATASET_PATH.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
-def build_rq1(rows: list[dict[str, Any]]) -> None:
-    approaches = [
-        ("Heuristic", "heuristic_label"),
-        ("DeepSeek-v4-flash", "deepseek_label"),
-        ("GPT", "gpt_label"),
-    ]
-    metric_fields = ["TP", "FP", "TN", "FN", "Precision", "Recall", "F1", "Accuracy"]
-
-    overall_rows = [{"approach": name, **confusion(rows, key)} for name, key in approaches]
-    write_csv(RQ1_DIR / "overall_comparison.csv", overall_rows, ["approach", *metric_fields])
-
-    sca_rows: list[dict[str, Any]] = []
-    for tool in sorted({norm_tool(row["tool_name"]) for row in rows}):
-        subset = [row for row in rows if norm_tool(row["tool_name"]) == tool]
-        for name, key in approaches:
-            sca_rows.append({"tool": tool, "approach": name, **confusion(subset, key)})
-    write_csv(RQ1_DIR / "sca_level_comparison.csv", sca_rows, ["tool", "approach", *metric_fields])
-
-    expanded: list[dict[str, Any]] = []
-    for row in rows:
-        cwes = cwe_list(row.get("cwe")) or ["<NO-CWE>"]
-        for cwe in cwes:
-            expanded.append({**row, "cwe_token": cwe})
-    cwe_rows: list[dict[str, Any]] = []
-    for cwe in sorted({row["cwe_token"] for row in expanded}):
-        subset = [row for row in expanded if row["cwe_token"] == cwe]
-        gt_tp = sum(1 for row in subset if row["ground_truth_label"] == "TP")
-        gt_fp = sum(1 for row in subset if row["ground_truth_label"] == "FP")
-        for name, key in approaches:
-            cwe_rows.append(
-                {
-                    "cwe": cwe,
-                    "sample_count": len(subset),
-                    "gt_tp_count": gt_tp,
-                    "gt_fp_count": gt_fp,
-                    "approach": name,
-                    **confusion(subset, key),
-                }
-            )
-    write_csv(RQ1_DIR / "cwe_level_comparison.csv", cwe_rows, ["cwe", "sample_count", "gt_tp_count", "gt_fp_count", "approach", *metric_fields])
-
-
-def build_rq2(rows: list[dict[str, Any]]) -> None:
-    categories: Counter[str] = Counter()
-    representatives: list[dict[str, Any]] = []
-    for row in rows:
-        states = {
-            "heuristic": row["heuristic_label"] == row["ground_truth_label"],
-            "deepseek": row["deepseek_label"] == row["ground_truth_label"],
-            "gpt": row["gpt_label"] == row["ground_truth_label"],
-        }
-        if all(states.values()):
-            category = "all three correct"
-        elif not any(states.values()):
-            category = "all three incorrect"
-        elif states["heuristic"] and not states["deepseek"] and not states["gpt"]:
-            category = "only heuristic correct"
-        elif states["deepseek"] and not states["heuristic"] and not states["gpt"]:
-            category = "only DeepSeek correct"
-        elif states["gpt"] and not states["heuristic"] and not states["deepseek"]:
-            category = "only GPT correct"
-        else:
-            category = "mixed partial agreement"
-        categories[category] += 1
-        if category != "mixed partial agreement":
-            representatives.append(
-                {
-                    "warning_id": row["warning_id"],
-                    "tool_name": norm_tool(row["tool_name"]),
-                    "rule_id": row["rule_id"],
-                    "cwe": "; ".join(cwe_list(row.get("cwe"))),
-                    "ground_truth_label": row["ground_truth_label"],
-                    "heuristic_label": row["heuristic_label"],
-                    "deepseek_label": row["deepseek_label"],
-                    "gpt_label": row["gpt_label"],
-                    "category": category,
-                }
-            )
-    write_csv(RQ2_DIR / "prediction_agreement.csv", [{"category": key, "count": categories[key]} for key in sorted(categories)], ["category", "count"])
-    matrix_rows = [
-        {
-            "pair": "Heuristic vs DeepSeek",
-            "heuristic_TP_deepseek_TP": sum(1 for row in rows if row["heuristic_label"] == "TP" and row["deepseek_label"] == "TP"),
-            "heuristic_TP_deepseek_FP": sum(1 for row in rows if row["heuristic_label"] == "TP" and row["deepseek_label"] == "FP"),
-            "heuristic_FP_deepseek_TP": sum(1 for row in rows if row["heuristic_label"] == "FP" and row["deepseek_label"] == "TP"),
-            "heuristic_FP_deepseek_FP": sum(1 for row in rows if row["heuristic_label"] == "FP" and row["deepseek_label"] == "FP"),
-        },
-        {
-            "pair": "Heuristic vs GPT",
-            "heuristic_TP_gpt_TP": sum(1 for row in rows if row["heuristic_label"] == "TP" and row["gpt_label"] == "TP"),
-            "heuristic_TP_gpt_FP": sum(1 for row in rows if row["heuristic_label"] == "TP" and row["gpt_label"] == "FP"),
-            "heuristic_FP_gpt_TP": sum(1 for row in rows if row["heuristic_label"] == "FP" and row["gpt_label"] == "TP"),
-            "heuristic_FP_gpt_FP": sum(1 for row in rows if row["heuristic_label"] == "FP" and row["gpt_label"] == "FP"),
-        },
-    ]
-    write_csv(RQ2_DIR / "disagreement_matrix.csv", matrix_rows, sorted({key for row in matrix_rows for key in row}))
-    write_csv(RQ2_DIR / "representative_cases.csv", representatives, ["warning_id", "tool_name", "rule_id", "cwe", "ground_truth_label", "heuristic_label", "deepseek_label", "gpt_label", "category"])
-
-
-def main() -> None:
-    rows = build_final_rows()
-    write_final_dataset(rows)
-    build_rq1(rows)
-    build_rq2(rows)
-    print("Rebuilt final dataset, RQ1 overall/SCA/CWE tables, and RQ2 disagreement tables.")
+def build():
+    gt = mapping(ROOT / "04_analysis/ground_truth/ground_truth_labels_1027.json",
+                 lambda x: x["warning_id"], lambda x: x["ground_truth_label"])
+    a = mapping(ROOT / "02_heuristic/results/heuristic_labels_1027.json",
+                lambda x: x["warning_info"]["warning_id"], lambda x: x["heuristic_based_labeling"]["label"])
+    db = mapping(ROOT / "03_llm/deepseek/results/deepseek_v4_flash_semantic_baseline_1027.json",
+                 lambda x: x["warning_info"]["warning_id"], lambda x: x["llm_based_labeling"]["deepseek"]["label"])
+    gb = mapping(ROOT / "03_llm/gpt/results/gpt_6_luna_baseline_predictions_1027.json",
+                 lambda x: x["warning_id"], lambda x: x["label"])
+    dcp = FUSION / "deepseek_v4_flash/results/fusion_predictions_1027.json"
+    gcp = FUSION / "gpt_6_luna/results/fusion_predictions_1027.json"
+    dc = mapping(dcp, lambda x: x["warning_id"], lambda x: x["final_label"])
+    gc = mapping(gcp, lambda x: x["warning_id"], lambda x: x["final_label"])
+    benchmark = read(ROOT / "01_dataset/processed/benchmark/benchmark_warnings_1027.json")
+    ids = {int(x["warning_id"]) for x in benchmark}
+    assert len(benchmark) == 1027 and all(set(m) == ids for m in (gt, a, db, gb, dc, gc))
+    rows = [{**x, "ground_truth_label": gt[int(x["warning_id"])],
+             "heuristic_label": a[int(x["warning_id"])],
+             "deepseek_baseline_label": db[int(x["warning_id"])],
+             "gpt_baseline_label": gb[int(x["warning_id"])],
+             "deepseek_fusion_label": dc[int(x["warning_id"])],
+             "gpt_fusion_label": gc[int(x["warning_id"])]} for x in benchmark]
+    assert Counter(x["ground_truth_label"] for x in rows) == {"TP": 54, "FP": 973}
+    save(RESULTS / "final_dataset/final_comparison_dataset_1027.json", rows)
+    baseline = [("A heuristic", "heuristic_label"),
+                ("B DeepSeek-v4-flash", "deepseek_baseline_label"),
+                ("B GPT-6 Luna", "gpt_baseline_label")]
+    table(RESULTS / "rq1/overall_comparison.csv",
+          [{"approach": name, **score(rows, field)} for name, field in baseline])
+    table(RESULTS / "rq1/sca_level_comparison.csv",
+          [{"tool": tool, "approach": name, "sample_count": len(subset), **score(subset, field)}
+           for tool in sorted({x["tool_name"] for x in rows})
+           for subset in [[x for x in rows if x["tool_name"] == tool]]
+           for name, field in baseline])
+    expanded = [{**x, "cwe_token": token} for x in rows for token in (cwes(x.get("cwe")) or ["<NO-CWE>"])]
+    table(RESULTS / "rq1/cwe_level_comparison.csv",
+          [{"cwe": cwe, "sample_count": len(subset),
+            "gt_tp_count": sum(x["ground_truth_label"] == "TP" for x in subset),
+            "gt_fp_count": sum(x["ground_truth_label"] == "FP" for x in subset),
+            "approach": name, **score(subset, field)}
+           for cwe in sorted({x["cwe_token"] for x in expanded})
+           for subset in [[x for x in expanded if x["cwe_token"] == cwe]]
+           for name, field in baseline])
+    groups = Counter()
+    cases = []
+    for x in rows:
+        correct = tuple(x[field] == x["ground_truth_label"] for _, field in baseline)
+        category = {(1, 1, 1): "all correct", (0, 0, 0): "all incorrect",
+                    (1, 0, 0): "only A correct", (0, 1, 0): "only DeepSeek B correct",
+                    (0, 0, 1): "only GPT B correct"}.get(correct, "mixed")
+        groups[category] += 1
+        cases.append({"warning_id": x["warning_id"], "tool_name": x["tool_name"],
+                      "rule_id": x["rule_id"], "cwe": "; ".join(cwes(x.get("cwe"))),
+                      "ground_truth_label": x["ground_truth_label"],
+                      "heuristic_label": x["heuristic_label"],
+                      "deepseek_baseline_label": x["deepseek_baseline_label"],
+                      "gpt_baseline_label": x["gpt_baseline_label"], "category": category})
+    table(RESULTS / "rq2/prediction_agreement.csv",
+          [{"category": k, "count": groups[k]} for k in sorted(groups)])
+    table(RESULTS / "rq2/warning_level_agreement.csv", cases)
+    table(RESULTS / "rq2/disagreement_matrix.csv",
+          [{"pair": name, **{f"A_{left}_B_{right}": sum(x["heuristic_label"] == left and x[field] == right for x in rows)
+                             for left in ("TP", "FP") for right in ("TP", "FP")}}
+           for name, field in (("A vs DeepSeek B", "deepseek_baseline_label"),
+                               ("A vs GPT B", "gpt_baseline_label"))])
+    summary = []
+    revisions = {}
+    for model, bfield, cfield, path in (
+        ("DeepSeek-v4-flash", "deepseek_baseline_label", "deepseek_fusion_label", dcp),
+        ("GPT-6 Luna", "gpt_baseline_label", "gpt_fusion_label", gcp),
+    ):
+        summary.extend(({"model": model, "method": method, **score(rows, field)}
+                        for method, field in (("B", bfield), ("C", cfield))))
+        items = read(path)
+        stage1 = {int(x["warning_id"]): x["stage1_label"] for x in items}
+        outcomes = Counter()
+        for x in rows:
+            rid = int(x["warning_id"])
+            outcomes[("correct" if x[cfield] == x["ground_truth_label"] else "incorrect") +
+                     ("_retain" if stage1[rid] == x[cfield] else "_flip")] += 1
+            if stage1[rid] != x[cfield]:
+                outcomes[stage1[rid] + "_to_" + x[cfield]] += 1
+        reliability = Counter(x["verification"]["evolution_evidence_reliability"] for x in items)
+        assert sum(outcomes[k] for k in ("correct_retain", "incorrect_retain", "correct_flip", "incorrect_flip")) == 1027
+        revisions[model] = {"stage2_coverage": 1027, "outcomes": dict(outcomes),
+                            "evolution_evidence_reliability": dict(reliability)}
+    table(FUSION / "analysis/results/fusion_overall_metrics.csv", summary)
+    table(FUSION / "analysis/results/fusion_vs_baseline_comparison.csv",
+          [{"model": name, "B_F1": b["F1"], "C_F1": c["F1"],
+            "B_precision": b["Precision"], "C_precision": c["Precision"],
+            "B_recall": b["Recall"], "C_recall": c["Recall"]}
+           for name in ("DeepSeek-v4-flash", "GPT-6 Luna")
+           for b, c in [[x for x in summary if x["model"] == name]]])
+    save(FUSION / "analysis/results/stage2_revision_analysis.json", revisions)
+    print("Rebuilt GT/A/B/C comparison, RQ1, RQ2, and fusion analyses.")
 
 
 if __name__ == "__main__":
-    main()
+    build()

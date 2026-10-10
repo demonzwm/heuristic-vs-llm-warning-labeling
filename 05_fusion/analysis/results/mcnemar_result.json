@@ -1,9 +1,0 @@
-{
-  "baseline_correct_fusion_wrong": 62,
-  "baseline_wrong_fusion_correct": 195,
-  "both_correct": 716,
-  "both_wrong": 54,
-  "changed_prediction_count": 257,
-  "net_corrected_warnings": 133,
-  "p": 0.0
-}

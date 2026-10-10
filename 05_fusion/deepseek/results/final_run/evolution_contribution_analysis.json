@@ -1,9 +1,0 @@
-{
-  "overall_counts": {
-    "NEUTRAL_OR_LIMITED": 100,
-    "CONFLICTING_OR_DECISIVE": 98,
-    "SUPPORTING": 47
-  },
-  "correct_branch_a_revisions_materially_used": 43,
-  "correct_branch_b_recoveries_materially_used": 1
-}

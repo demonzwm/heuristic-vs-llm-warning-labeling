@@ -1,45 +1,26 @@
-# 05_fusion
+# Method C: full warning verification
 
-This directory contains the self-contained final fusion strategy. All final inputs, Stage 1 output, prompts, CWE knowledge, schemas, runners, completed predictions, and analysis summaries needed by the Fusion artifact are inside this repository.
+C has two stages for each of the 1,027 warnings. Stage 1 judges code semantics
+using the warning slice and CWE knowledge. Stage 2 receives that model's own
+Stage 1 output, the slice, original cross-version matching facts, the CWE
+checklist, and five constructed demonstrations. It verifies both a defect
+hypothesis and a safety hypothesis before returning a binary TP/FP label.
 
-## Method Boundary
+Every warning received Stage 2 verification, independent of A or B's labels.
+The matching algorithm and A prediction are unchanged. Stage 2 receives
+matching facts, but not A's final TP/FP label or GT. The model-specific
+prompt snapshots record the exact inputs used in the completed runs.
 
-- Heuristic and LLM independently produce initial labels.
-- Agreement cases keep the initial label.
-- Disagreement cases enter Stage 2.
-- Stage 1 uses warning-related code slices and CWE knowledge.
-- Stage 2 uses the code slice, Stage 1 output, structured warning-evolution information, and a CWE-specific reasoning schema.
-- Stage 2 constructs a defect hypothesis and a safety hypothesis before producing a final TP/FP label.
-- `heuristic_label_for_routing_only` is retained only to decide whether Stage 2 is needed. It is not passed to the Stage 2 prompt.
+## Released files
 
-## Contents
+- `method/prompts/`, `method/schemas/`, `method/knowledge/`, and
+  `method/demonstrations/`: reasoning instructions and constructed examples.
+- `method/stage1/{deepseek_v4_flash,gpt_6_luna}/`: each model's own 1,027 semantic outputs.
+- `method/inputs/{deepseek_v4_flash,gpt_6_luna}/`: exact 1,027 Stage 2 prompts per model.
+- `{deepseek_v4_flash,gpt_6_luna}/results/fusion_predictions_1027.json`: C label and full
+  verification for every warning.
+- `analysis/results/`: same-model B/C metrics and Stage 1 to C revision counts.
 
-- `method/prompts/`: final Stage 1 and Stage 2 prompts.
-- `method/knowledge/`: CWE knowledge used by Stage 1.
-- `method/schemas/`: CWE-specific and generic Stage 2 reasoning schemas.
-- `method/data/fusion_inference_input_1027.json`: inference-only input without evaluation label fields.
-- `method/stage1/stage1_results_1027.json`: final unified 1,027-warning Stage 1 output.
-- `method/scripts/`: preparation, preflight, and executable Fusion runners.
-- `deepseek/results/final_run/`: completed DeepSeek fusion predictions and run summaries.
-- `gpt/results/final_run/`: completed GPT fusion predictions and run summaries.
-- `analysis/results/`: fusion evaluation artifacts and aggregate summaries.
-- `analysis/scripts/`: scripts for summarizing completed fusion runs.
-
-## Validation
-
-Run:
-
-```powershell
-python 05_fusion/method/scripts/prepare_fusion_materials.py --preflight
-python 05_fusion/method/scripts/run_deepseek_fusion.py --preflight
-python 05_fusion/method/scripts/run_gpt_fusion.py --preflight
-python 05_fusion/analysis/scripts/summarize_fusion_results.py
-```
-
-These commands perform local checks or aggregate completed results. They do not call model APIs.
-
-## Execution
-
-`run_deepseek_fusion.py --execute` and `run_gpt_fusion.py --execute` run the final Fusion method and call the configured API endpoint. API keys, model names, and base URLs must be supplied through environment variables or command-line arguments. Local checkpoint and raw-response files are written under `05_fusion/runtime/`, which is ignored by `.gitignore`.
-
-This cleanup did not execute either runner.
+Run `python 05_fusion/method/scripts/validate_fusion_release.py` for offline
+coverage, prompt-hash, label, and input-isolation checks. Rebuild evaluation
+with `python 04_analysis/scripts/build_final_paper_sync.py`.

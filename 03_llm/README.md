@@ -1,25 +1,11 @@
-# 03_llm
+# Method B: code-slice LLM baselines
 
-This directory contains the RQ1/RQ2 LLM baselines.
+DeepSeek-v4-flash B is in `deepseek/results/`. GPT-6 Luna B is in
+`gpt/results/gpt_6_luna_baseline_predictions_1027.json`; its exact 1,027
+prompts are in `gpt/inputs/baseline_prompts_1027.json`. The GPT run used low
+reasoning effort. Each record has one binary TP/FP label. No heuristic label,
+evolution evidence, or GT was supplied to B.
 
-## Scope
-
-The baseline uses warning metadata and the warning-related code slice only. It does not use CWE knowledge, heuristic labels, fusion routing information, or manual ground truth during prediction.
-
-## Contents
-
-- `prompts/baseline_binary_prompt.py`: final binary TP/FP baseline prompt.
-- `scripts/deepseek/`: retained DeepSeek baseline scripts.
-- `scripts/gpt/run_gpt_baseline.py`: GPT baseline runner/preflight entry point.
-- `deepseek/results/`: completed DeepSeek baseline predictions and evaluation reports.
-- `gpt/results/`: completed GPT baseline predictions.
-
-## GPT Configuration
-
-The GPT runner reads:
-
-- `OPENAI_API_KEY`
-- `OPENAI_BASE_URL`
-- `GPT_MODEL`
-
-Running `python 03_llm/scripts/gpt/run_gpt_baseline.py --preflight` performs only local validation and does not call an API.
+Run `python 03_llm/scripts/gpt/validate_gpt_baseline.py` to check IDs,
+prompt hashes, labels, and model identity without contacting an API. RQ1/RQ2
+metrics are rebuilt under `04_analysis/` from the released GT.
