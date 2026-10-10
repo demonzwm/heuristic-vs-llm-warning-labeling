@@ -1,4 +1,4 @@
-"""Build all paper tables from the released GT and frozen A/B/C predictions."""
+"""Build paper tables from released GT and frozen heuristic, LLM, fusion predictions."""
 import csv
 import json
 from collections import Counter
@@ -67,15 +67,15 @@ def build():
     assert len(benchmark) == 1027 and all(set(m) == ids for m in (gt, a, db, gb, dc, gc))
     rows = [{**x, "ground_truth_label": gt[int(x["warning_id"])],
              "heuristic_label": a[int(x["warning_id"])],
-             "deepseek_baseline_label": db[int(x["warning_id"])],
-             "gpt_baseline_label": gb[int(x["warning_id"])],
+             "deepseek_llm_label": db[int(x["warning_id"])],
+             "gpt_6_luna_llm_label": gb[int(x["warning_id"])],
              "deepseek_fusion_label": dc[int(x["warning_id"])],
-             "gpt_fusion_label": gc[int(x["warning_id"])]} for x in benchmark]
+             "gpt_6_luna_fusion_label": gc[int(x["warning_id"])]} for x in benchmark]
     assert Counter(x["ground_truth_label"] for x in rows) == {"TP": 54, "FP": 973}
     save(RESULTS / "final_dataset/final_comparison_dataset_1027.json", rows)
-    baseline = [("A heuristic", "heuristic_label"),
-                ("B DeepSeek-v4-flash", "deepseek_baseline_label"),
-                ("B GPT-6 Luna", "gpt_baseline_label")]
+    baseline = [("Heuristic", "heuristic_label"),
+                ("LLM (DeepSeek-v4-flash)", "deepseek_llm_label"),
+                ("LLM (GPT-6 Luna)", "gpt_6_luna_llm_label")]
     table(RESULTS / "rq1/overall_comparison.csv",
           [{"approach": name, **score(rows, field)} for name, field in baseline])
     table(RESULTS / "rq1/sca_level_comparison.csv",
@@ -97,31 +97,60 @@ def build():
     for x in rows:
         correct = tuple(x[field] == x["ground_truth_label"] for _, field in baseline)
         category = {(1, 1, 1): "all correct", (0, 0, 0): "all incorrect",
-                    (1, 0, 0): "only A correct", (0, 1, 0): "only DeepSeek B correct",
-                    (0, 0, 1): "only GPT B correct"}.get(correct, "mixed")
+                    (1, 0, 0): "only heuristic correct", (0, 1, 0): "only DeepSeek LLM correct",
+                    (0, 0, 1): "only GPT LLM correct"}.get(correct, "mixed")
         groups[category] += 1
         cases.append({"warning_id": x["warning_id"], "tool_name": x["tool_name"],
                       "rule_id": x["rule_id"], "cwe": "; ".join(cwes(x.get("cwe"))),
                       "ground_truth_label": x["ground_truth_label"],
                       "heuristic_label": x["heuristic_label"],
-                      "deepseek_baseline_label": x["deepseek_baseline_label"],
-                      "gpt_baseline_label": x["gpt_baseline_label"], "category": category})
+                      "deepseek_llm_label": x["deepseek_llm_label"],
+                      "gpt_6_luna_llm_label": x["gpt_6_luna_llm_label"], "category": category})
     table(RESULTS / "rq2/prediction_agreement.csv",
           [{"category": k, "count": groups[k]} for k in sorted(groups)])
     table(RESULTS / "rq2/warning_level_agreement.csv", cases)
     table(RESULTS / "rq2/disagreement_matrix.csv",
-          [{"pair": name, **{f"A_{left}_B_{right}": sum(x["heuristic_label"] == left and x[field] == right for x in rows)
+          [{"pair": name, **{f"heuristic_{left}_llm_{right}": sum(x["heuristic_label"] == left and x[field] == right for x in rows)
                              for left in ("TP", "FP") for right in ("TP", "FP")}}
-           for name, field in (("A vs DeepSeek B", "deepseek_baseline_label"),
-                               ("A vs GPT B", "gpt_baseline_label"))])
+           for name, field in (("Heuristic vs DeepSeek LLM", "deepseek_llm_label"),
+                               ("Heuristic vs GPT LLM", "gpt_6_luna_llm_label"))])
+    shared_llm = [x for x in rows if x["deepseek_llm_label"] == x["gpt_6_luna_llm_label"]]
+    assert len(shared_llm) == 518
+    shared_cases = [{"warning_id": x["warning_id"], "ground_truth_label": x["ground_truth_label"],
+                     "heuristic_label": x["heuristic_label"], "shared_llm_label": x["deepseek_llm_label"],
+                     "relation": "disagreement" if x["heuristic_label"] != x["deepseek_llm_label"] else "agreement"}
+                    for x in shared_llm]
+    table(RESULTS / "rq2/shared_llm_518_warning_level.csv", shared_cases)
+    discordant = [x for x in shared_cases if x["relation"] == "disagreement"]
+    assert len(discordant) == 136
+    save(RESULTS / "rq2/shared_llm_518_summary.json", {
+        "selection_rule": "DeepSeek-v4-flash LLM label equals GPT-6 Luna LLM label",
+        "selected_warnings": 518,
+        "heuristic_vs_shared_llm": {"agreement": 382, "disagreement": 136},
+        "disagreement_directions": {
+            "heuristic_FP_shared_llm_TP": sum(x["heuristic_label"] == "FP" for x in discordant),
+            "heuristic_TP_shared_llm_FP": sum(x["heuristic_label"] == "TP" for x in discordant),
+        },
+        "groups": [
+            {"relation": relation, "heuristic_label": heuristic, "shared_llm_label": llm,
+             "count": len(subset), "ground_truth": dict(Counter(x["ground_truth_label"] for x in subset)),
+             "heuristic_correct": sum(x["heuristic_label"] == x["ground_truth_label"] for x in subset),
+             "llm_correct": sum(x["shared_llm_label"] == x["ground_truth_label"] for x in subset)}
+            for relation in ("agreement", "disagreement")
+            for heuristic in ("TP", "FP") for llm in ("TP", "FP")
+            for subset in [[x for x in shared_cases if x["relation"] == relation
+                            and x["heuristic_label"] == heuristic and x["shared_llm_label"] == llm]]
+            if subset
+        ],
+    })
     summary = []
     revisions = {}
     for model, bfield, cfield, path in (
-        ("DeepSeek-v4-flash", "deepseek_baseline_label", "deepseek_fusion_label", dcp),
-        ("GPT-6 Luna", "gpt_baseline_label", "gpt_fusion_label", gcp),
+        ("DeepSeek-v4-flash", "deepseek_llm_label", "deepseek_fusion_label", dcp),
+        ("GPT-6 Luna", "gpt_6_luna_llm_label", "gpt_6_luna_fusion_label", gcp),
     ):
         summary.extend(({"model": model, "method": method, **score(rows, field)}
-                        for method, field in (("B", bfield), ("C", cfield))))
+                        for method, field in (("LLM", bfield), ("Fusion", cfield))))
         items = read(path)
         stage1 = {int(x["warning_id"]): x["stage1_label"] for x in items}
         outcomes = Counter()
@@ -137,13 +166,13 @@ def build():
                             "evolution_evidence_reliability": dict(reliability)}
     table(FUSION / "analysis/results/fusion_overall_metrics.csv", summary)
     table(FUSION / "analysis/results/fusion_vs_baseline_comparison.csv",
-          [{"model": name, "B_F1": b["F1"], "C_F1": c["F1"],
-            "B_precision": b["Precision"], "C_precision": c["Precision"],
-            "B_recall": b["Recall"], "C_recall": c["Recall"]}
+          [{"model": name, "llm_F1": b["F1"], "fusion_F1": c["F1"],
+            "llm_precision": b["Precision"], "fusion_precision": c["Precision"],
+            "llm_recall": b["Recall"], "fusion_recall": c["Recall"]}
            for name in ("DeepSeek-v4-flash", "GPT-6 Luna")
            for b, c in [[x for x in summary if x["model"] == name]]])
     save(FUSION / "analysis/results/stage2_revision_analysis.json", revisions)
-    print("Rebuilt GT/A/B/C comparison, RQ1, RQ2, and fusion analyses.")
+    print("Rebuilt GT, heuristic, LLM, fusion, RQ1, and RQ2 analyses.")
 
 
 if __name__ == "__main__":

@@ -2,6 +2,6 @@ category,count
 all correct,373
 all incorrect,9
 mixed,497
-only A correct,97
-only DeepSeek B correct,29
-only GPT B correct,22
+only DeepSeek LLM correct,29
+only GPT LLM correct,22
+only heuristic correct,97

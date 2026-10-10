@@ -1,0 +1,660 @@
+{
+  "scope": "frozen predictions; no labels are changed",
+  "structural_validation_passed": true,
+  "semantic_consistency_rule": "TP requires defect_hypothesis_status=SUPPORTED; FP must not have defect_hypothesis_status=SUPPORTED. UNRESOLVED/UNRESOLVED with FP is not counted because the binary policy can choose FP after explaining insufficient defect evidence.",
+  "models": {
+    "deepseek_v4_flash": {
+      "structural_validation_passed": true,
+      "stage2_coverage": 1027,
+      "semantic_consistency_passed": false,
+      "status_label_conflict_count": 12,
+      "status_label_conflicts": [
+        {
+          "warning_id": 72,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 160,
+          "issue": "FP_DESPITE_SUPPORTED_DEFECT",
+          "final_label": "FP",
+          "defect_hypothesis_status": "SUPPORTED",
+          "safety_hypothesis_status": "SUPPORTED"
+        },
+        {
+          "warning_id": 163,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 205,
+          "issue": "FP_DESPITE_SUPPORTED_DEFECT",
+          "final_label": "FP",
+          "defect_hypothesis_status": "SUPPORTED",
+          "safety_hypothesis_status": "SUPPORTED"
+        },
+        {
+          "warning_id": 450,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 460,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 463,
+          "issue": "FP_DESPITE_SUPPORTED_DEFECT",
+          "final_label": "FP",
+          "defect_hypothesis_status": "SUPPORTED",
+          "safety_hypothesis_status": "SUPPORTED"
+        },
+        {
+          "warning_id": 483,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "REFUTED"
+        },
+        {
+          "warning_id": 627,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 888,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 997,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 1014,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        }
+      ]
+    },
+    "gpt_6_luna": {
+      "structural_validation_passed": true,
+      "stage2_coverage": 1027,
+      "semantic_consistency_passed": false,
+      "status_label_conflict_count": 79,
+      "status_label_conflicts": [
+        {
+          "warning_id": 7,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 12,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 18,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 58,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 61,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 72,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 78,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 95,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 146,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 169,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 200,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 228,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 260,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 261,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 360,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 402,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 414,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 427,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 453,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 476,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 480,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 518,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 568,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 582,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 588,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 592,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 625,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 630,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 639,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 640,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 643,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 653,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 661,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 662,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 674,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 685,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 701,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 703,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 706,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 717,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 724,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 725,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 726,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 731,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 746,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 751,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 756,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 766,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 775,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 777,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 778,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 780,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 789,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 793,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 794,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 795,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 802,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 803,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 805,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 808,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 818,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 825,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 830,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 843,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 852,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 864,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 890,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 894,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 896,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 898,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 904,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 914,
+          "issue": "FP_DESPITE_SUPPORTED_DEFECT",
+          "final_label": "FP",
+          "defect_hypothesis_status": "SUPPORTED",
+          "safety_hypothesis_status": "SUPPORTED"
+        },
+        {
+          "warning_id": 924,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 971,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 981,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 1002,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 1008,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 1009,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        },
+        {
+          "warning_id": 1013,
+          "issue": "TP_WITHOUT_SUPPORTED_DEFECT",
+          "final_label": "TP",
+          "defect_hypothesis_status": "UNRESOLVED",
+          "safety_hypothesis_status": "UNRESOLVED"
+        }
+      ]
+    }
+  }
+}

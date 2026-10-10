@@ -1,4 +1,4 @@
-"""Validate the frozen GPT-6 Luna B run without contacting an API."""
+"""Validate the frozen GPT-6 Luna LLM run without contacting an API."""
 import hashlib
 import json
 from pathlib import Path
@@ -19,7 +19,7 @@ def main():
         assert labels[rid]["prompt_sha256"] == item["prompt_sha256"]
         assert labels[rid]["label"] in {"TP", "FP"}
         assert labels[rid]["model"] == "gpt-6-luna"
-    print("Validated 1,027 GPT-6 Luna B prompts and predictions; no API call.")
+    print("Validated 1,027 GPT-6 Luna LLM prompts and predictions; no API call.")
 
 
 if __name__ == "__main__":

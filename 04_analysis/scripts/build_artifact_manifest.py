@@ -6,6 +6,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def released_bytes(path):
+    """Git stores text in LF form; normalize Windows worktree CRLF first."""
+    return path.read_bytes().replace(b"\r\n", b"\n")
+
+
 def main():
     included = []
     for pattern in (
@@ -25,13 +30,14 @@ def main():
         "release": "paper artifact 2026-10-10",
         "warning_count": 1027,
         "ground_truth_counts": {"TP": 54, "FP": 973},
-        "methods": {"A": "cross-version heuristic",
-                    "B": ["DeepSeek-v4-flash", "gpt-6-luna"],
-                    "C": "full Stage 2 verification of all 1,027 warnings"},
+        "methods": {"Heuristic": "cross-version warning matching",
+                    "LLM": ["DeepSeek-v4-flash", "gpt-6-luna"],
+                    "Fusion": "full Stage 2 verification of all 1,027 warnings"},
+        "hash_byte_convention": "SHA-256 after CRLF-to-LF normalization, matching Git repository blobs",
         "gpt_reasoning_effort": "low",
         "selected_ground_truth_changes": {"150": "TP", "161": "TP", "342": "FP",
                                           "596": "TP", "983": "TP"},
-        "sha256": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+        "sha256": {p.relative_to(ROOT).as_posix(): hashlib.sha256(released_bytes(p)).hexdigest()
                    for p in included},
     }
     (ROOT / "ARTIFACT_MANIFEST.json").write_text(

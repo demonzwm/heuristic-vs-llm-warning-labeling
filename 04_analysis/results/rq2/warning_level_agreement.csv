@@ -1,4 +1,4 @@
-warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_baseline_label,gpt_baseline_label,category
+warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm_label,gpt_6_luna_llm_label,category
 1,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
 2,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
 3,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
@@ -9,11 +9,11 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 8,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 9,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,FP,mixed
 10,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
-11,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT B correct
+11,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 12,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,TP,mixed
 13,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 14,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
-15,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT B correct
+15,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 16,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 17,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 18,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
@@ -29,7 +29,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 28,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
 29,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
 30,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
-31,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT B correct
+31,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 32,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 33,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,TP,mixed
 34,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
@@ -69,10 +69,10 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 68,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 69,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 70,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,TP,mixed
-71,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only A correct
-72,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT B correct
-73,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only A correct
-74,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only A correct
+71,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only heuristic correct
+72,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT LLM correct
+73,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only heuristic correct
+74,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only heuristic correct
 75,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 76,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 77,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
@@ -90,7 +90,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 89,codeql,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,TP,mixed
 90,codeql,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,FP,all correct
 91,codeql,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,TP,mixed
-92,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only A correct
+92,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only heuristic correct
 93,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 94,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,TP,mixed
 95,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
@@ -108,7 +108,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 107,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 108,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 109,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
-110,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,TP,FP,only GPT B correct
+110,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,TP,FP,only GPT LLM correct
 111,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,FP,FP,mixed
 112,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 113,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
@@ -140,35 +140,35 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 140,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,TP,mixed
 141,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 142,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
-143,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT B correct
+143,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 144,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 145,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 146,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 147,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 148,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 149,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
-150,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT B correct
+150,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 151,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 152,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 153,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
-154,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT B correct
+154,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 155,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 156,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,TP,FP,mixed
-157,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,FP,FP,TP,only GPT B correct
+157,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,FP,FP,TP,only GPT LLM correct
 158,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,TP,mixed
 159,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all correct
 160,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all correct
-161,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,FP,FP,TP,only GPT B correct
+161,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,FP,FP,TP,only GPT LLM correct
 162,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,FP,FP,all incorrect
-163,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,FP,only DeepSeek B correct
-164,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,FP,TP,only GPT B correct
+163,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,FP,only DeepSeek LLM correct
+164,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,FP,TP,only GPT LLM correct
 165,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,TP,mixed
 166,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,TP,mixed
 167,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 168,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 169,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
 170,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
-171,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+171,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 172,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 173,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 174,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
@@ -183,7 +183,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 183,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 184,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 185,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-186,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+186,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 187,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 188,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 189,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
@@ -191,24 +191,24 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 191,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 192,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
 193,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
-194,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+194,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 195,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 196,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
 197,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 198,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 199,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-200,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+200,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 201,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 202,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 203,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 204,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-205,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+205,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 206,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 207,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 208,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 209,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-210,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
-211,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+210,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+211,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 212,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 213,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 214,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
@@ -216,8 +216,8 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 216,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 217,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 218,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-219,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
-220,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+219,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+220,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 221,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 222,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 223,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
@@ -228,15 +228,15 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 228,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 229,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 230,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-231,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+231,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 232,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-233,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+233,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 234,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 235,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
-236,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
-237,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+236,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+237,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 238,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,TP,mixed
-239,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+239,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 240,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 241,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 242,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
@@ -257,7 +257,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 257,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 258,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 259,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-260,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+260,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 261,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
 262,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
 263,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
@@ -276,7 +276,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 276,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 277,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 278,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-279,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+279,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 280,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 281,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 282,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
@@ -284,15 +284,15 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 284,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 285,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 286,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
-287,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
-288,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+287,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
+288,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 289,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-290,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+290,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 291,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
 292,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-293,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+293,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 294,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-295,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+295,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 296,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 297,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 298,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
@@ -305,7 +305,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 305,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
 306,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 307,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
-308,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+308,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 309,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 310,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 311,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
@@ -315,7 +315,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 315,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 316,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 317,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-318,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+318,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 319,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 320,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 321,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
@@ -327,30 +327,30 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 327,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,FP,FP,mixed
 328,codeql,cpp/inconsistent-null-check,CWE-476,TP,TP,FP,TP,mixed
 329,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,TP,FP,TP,mixed
-330,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek B correct
+330,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek LLM correct
 331,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,FP,mixed
 332,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,FP,mixed
-333,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT B correct
-334,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT B correct
-335,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT B correct
-336,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek B correct
-337,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT B correct
-338,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT B correct
+333,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT LLM correct
+334,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT LLM correct
+335,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT LLM correct
+336,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek LLM correct
+337,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT LLM correct
+338,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT LLM correct
 339,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,FP,mixed
 340,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,FP,mixed
 341,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,TP,TP,TP,all correct
-342,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT B correct
+342,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT LLM correct
 343,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,FP,mixed
-344,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,TP,FP,FP,only A correct
+344,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,TP,FP,FP,only heuristic correct
 345,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,TP,TP,FP,mixed
 346,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,TP,TP,TP,all correct
 347,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,FP,mixed
-348,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT B correct
+348,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT LLM correct
 349,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,FP,mixed
-350,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek B correct
-351,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek B correct
-352,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only A correct
-353,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only A correct
+350,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek LLM correct
+351,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek LLM correct
+352,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,TP,only heuristic correct
+353,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,TP,only heuristic correct
 354,codeql,cpp/suspicious-allocation-size,CWE-122; CWE-131,FP,FP,FP,FP,all correct
 355,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all correct
 356,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
@@ -362,7 +362,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 362,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 363,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 364,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-365,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+365,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 366,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 367,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 368,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
@@ -408,7 +408,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 408,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 409,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 410,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
-411,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+411,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 412,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 413,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 414,csa,Dereference of null pointer,CWE-476,TP,FP,TP,TP,mixed
@@ -431,7 +431,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 431,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 432,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 433,csa,Dereference of null pointer,CWE-476,FP,FP,TP,FP,mixed
-434,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+434,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 435,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 436,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 437,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
@@ -457,15 +457,15 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 457,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 458,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 459,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
-460,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+460,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 461,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 462,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 463,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 464,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 465,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 466,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
-467,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT B correct
-468,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+467,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT LLM correct
+468,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 469,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 470,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 471,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
@@ -527,11 +527,11 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 527,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 528,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 529,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-530,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT B correct
+530,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 531,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 532,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 533,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
-534,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+534,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 535,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 536,csa,Dereference of null pointer,CWE-476,TP,FP,TP,TP,mixed
 537,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
@@ -543,7 +543,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 543,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 544,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 545,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-546,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+546,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 547,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 548,csa,Dereference of null pointer,CWE-476,FP,FP,TP,FP,mixed
 549,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
@@ -560,7 +560,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 560,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 561,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 562,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
-563,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+563,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 564,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 565,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 566,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
@@ -568,7 +568,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 568,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 569,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 570,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
-571,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+571,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 572,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 573,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 574,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
@@ -601,7 +601,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 601,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 602,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 603,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
-604,csa,Dereference of null pointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+604,csa,Dereference of null pointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 605,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 606,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 607,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
@@ -613,7 +613,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 613,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 614,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 615,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-616,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT B correct
+616,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 617,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 618,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 619,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
@@ -626,7 +626,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 626,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 627,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 628,csa,Dereference of null pointer,CWE-476,TP,FP,FP,FP,all incorrect
-629,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT B correct
+629,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 630,csa,Dereference of null pointer,CWE-476,TP,FP,FP,FP,all incorrect
 631,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 632,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
@@ -635,24 +635,24 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 635,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 636,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 637,csa,Dereference of null pointer,CWE-476,FP,FP,TP,FP,mixed
-638,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+638,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 639,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 640,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 641,csa,Dereference of null pointer,CWE-476,FP,FP,TP,FP,mixed
-642,csa,Dereference of null pointer,CWE-476,TP,TP,FP,FP,only A correct
-643,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
-644,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
-645,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+642,csa,Dereference of null pointer,CWE-476,TP,TP,FP,FP,only heuristic correct
+643,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
+644,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
+645,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 646,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-647,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only A correct
+647,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 648,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 649,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 650,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 651,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 652,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,FP,mixed
-653,cppcheck,nullPointerRedundantCheck,CWE-476,TP,TP,FP,FP,only A correct
+653,cppcheck,nullPointerRedundantCheck,CWE-476,TP,TP,FP,FP,only heuristic correct
 654,cppcheck,nullPointerRedundantCheck,CWE-476,TP,TP,FP,TP,mixed
-655,cppcheck,nullPointer,CWE-476,TP,TP,FP,FP,only A correct
+655,cppcheck,nullPointer,CWE-476,TP,TP,FP,FP,only heuristic correct
 656,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,TP,TP,all incorrect
 657,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,FP,mixed
 658,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
@@ -660,18 +660,18 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 660,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 661,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 662,cppcheck,nullPointer,CWE-476,TP,FP,TP,TP,mixed
-663,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+663,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 664,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,TP,TP,all incorrect
 665,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,FP,mixed
 666,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 667,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 668,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 669,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-670,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-671,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-672,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-673,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-674,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+670,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+671,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+672,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+673,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+674,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 675,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 676,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 677,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
@@ -686,14 +686,14 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 686,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 687,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 688,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-689,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-690,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-691,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+689,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+690,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+691,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 692,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 693,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,FP,mixed
 694,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 695,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,FP,mixed
-696,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+696,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 697,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,FP,mixed
 698,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 699,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
@@ -703,21 +703,21 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 703,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 704,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 705,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-706,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+706,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 707,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 708,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 709,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 710,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-711,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+711,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 712,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 713,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-714,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-715,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-716,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+714,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+715,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+716,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 717,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 718,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 719,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-720,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+720,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 721,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 722,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 723,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
@@ -725,7 +725,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 725,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 726,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 727,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-728,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+728,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 729,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 730,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 731,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
@@ -758,8 +758,8 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 758,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 759,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 760,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-761,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only A correct
-762,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+761,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only heuristic correct
+762,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 763,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 764,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 765,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
@@ -774,7 +774,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 774,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 775,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 776,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-777,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only A correct
+777,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 778,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 779,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 780,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
@@ -792,42 +792,42 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 792,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 793,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 794,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-795,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+795,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 796,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 797,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 798,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 799,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-800,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only A correct
-801,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-802,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+800,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only heuristic correct
+801,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+802,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 803,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
-804,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-805,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-806,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-807,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-808,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
-809,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+804,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+805,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+806,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+807,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+808,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+809,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 810,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 811,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 812,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 813,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 814,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-815,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+815,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 816,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 817,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 818,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-819,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-820,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-821,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+819,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+820,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+821,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 822,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 823,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 824,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 825,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-826,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only A correct
-827,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only A correct
+826,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only heuristic correct
+827,cppcheck,nullPointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 828,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 829,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-830,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+830,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 831,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 832,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 833,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
@@ -835,39 +835,39 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 835,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 836,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 837,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-838,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+838,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 839,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 840,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 841,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 842,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-843,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+843,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 844,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 845,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 846,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 847,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-848,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-849,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-850,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+848,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+849,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+850,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 851,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 852,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 853,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 854,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-855,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+855,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 856,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 857,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 858,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-859,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+859,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 860,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-861,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-862,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-863,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+861,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+862,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+863,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 864,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 865,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 866,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 867,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 868,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-869,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-870,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+869,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+870,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 871,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 872,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 873,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
@@ -877,39 +877,39 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 877,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 878,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 879,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-880,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-881,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-882,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+880,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+881,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+882,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 883,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 884,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 885,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 886,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 887,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
-888,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+888,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 889,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 890,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 891,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 892,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 893,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-894,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+894,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 895,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-896,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+896,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 897,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,TP,TP,all incorrect
 898,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 899,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 900,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-901,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+901,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 902,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 903,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 904,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-905,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+905,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 906,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 907,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 908,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 909,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 910,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 911,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-912,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+912,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 913,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 914,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 915,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
@@ -920,23 +920,23 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 920,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 921,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 922,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-923,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-924,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+923,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+924,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 925,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 926,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 927,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 928,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-929,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+929,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 930,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 931,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 932,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 933,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 934,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-935,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+935,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 936,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 937,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 938,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-939,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+939,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 940,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 941,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 942,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
@@ -964,7 +964,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 964,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 965,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 966,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
-967,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+967,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 968,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 969,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 970,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
@@ -979,25 +979,25 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 979,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 980,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 981,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-982,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+982,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 983,cppcheck,nullPointerRedundantCheck,CWE-476,TP,TP,FP,TP,mixed
-984,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+984,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 985,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
 986,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 987,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 988,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 989,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-990,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+990,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 991,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 992,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 993,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 994,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 995,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,FP,mixed
 996,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,FP,mixed
-997,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek B correct
+997,cppcheck,nullPointerRedundantCheck,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 998,cppcheck,nullPointer,CWE-476,FP,FP,FP,FP,all correct
 999,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-1000,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+1000,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 1001,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1002,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1003,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
@@ -1005,16 +1005,16 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_bas
 1005,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1006,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1007,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-1008,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-1009,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+1008,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+1009,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 1010,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1011,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 1012,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1013,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1014,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1015,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-1016,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
-1017,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only A correct
+1016,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
+1017,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 1018,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1019,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 1020,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
