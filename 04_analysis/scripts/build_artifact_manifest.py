@@ -15,7 +15,8 @@ def main():
     included = []
     for pattern in (
         "01_dataset/processed/benchmark/benchmark_warnings_1027.json",
-        "02_heuristic/results/heuristic_labels_1027.json",
+        "02_heuristic/scripts/*.py", "02_heuristic/*.json",
+        "02_heuristic/results/*.json", "02_heuristic/results/*.csv",
         "03_llm/deepseek/results/deepseek_v4_flash_semantic_baseline_1027.json",
         "03_llm/gpt/inputs/*.json", "03_llm/gpt/results/*.json",
         "04_analysis/ground_truth/*.json", "04_analysis/ground_truth/*.csv",
@@ -27,7 +28,7 @@ def main():
         included.extend(ROOT.glob(pattern))
     included = sorted({p for p in included if p.is_file()})
     data = {
-        "release": "paper artifact 2026-10-10",
+        "release": "paper artifact final reproducibility package",
         "warning_count": 1027,
         "ground_truth_counts": {"TP": 54, "FP": 973},
         "methods": {"Heuristic": "cross-version warning matching",

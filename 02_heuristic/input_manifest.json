@@ -1,0 +1,23 @@
+{
+  "benchmark": {
+    "sha256": "e8830d709afabb5b0bf35ec9ac82b644c50b1dad558f9df164941b26b8b8c357",
+    "bytes": 9103590,
+    "path": "01_dataset/processed/benchmark/benchmark_warnings_1027.json"
+  },
+  "source_pool": {
+    "sha256": "40d78dcb3adcc92d916f8e2a48d7ea6e85435b38b285952f0e03c2afc05dbcc5",
+    "bytes": 29010727,
+    "path": "external input; pass with --source-pool"
+  },
+  "cppcheck_pool": {
+    "sha256": "ea0e3f3b1a654519db35f5f9d8dca9b9fc5daed691c0487aadaa7299a4c1e656",
+    "bytes": 172961155,
+    "path": "external input; pass with --cppcheck-pool"
+  },
+  "ground_truth": {
+    "sha256": "063547837ab99c837b1eecf9d4ed08e15039d11d92aa01fce5436c421220613b",
+    "bytes": 9378335,
+    "path": "04_analysis/ground_truth/ground_truth_labels_1027.json"
+  },
+  "source_root": "external project source checkout; pass with --source-root"
+}

@@ -1,3 +1,3 @@
 pair,heuristic_TP_llm_TP,heuristic_TP_llm_FP,heuristic_FP_llm_TP,heuristic_FP_llm_FP
-Heuristic vs DeepSeek LLM,14,55,189,769
-Heuristic vs GPT LLM,38,31,506,452
+Heuristic vs DeepSeek LLM,20,78,183,746
+Heuristic vs GPT LLM,56,42,488,441

@@ -1,23 +1,35 @@
 # Static-Analysis Warning Validation: Paper Artifact
 
-This directory contains the single paper release for 1,027 warnings. The
-approaches are **Heuristic** (cross-version warning matching), **LLM**
-(code-slice judgment), and **Fusion** (semantic and warning-evolution
-verification). Fusion sends **every** warning to Stage 2. TP is the positive class.
+This repository contains the final reproducibility package for 1,027 warnings:
+cross-version Heuristic matching, independent code-slice LLM judgments, and
+EvoVerify. Every warning enters EvoVerify Stage 2. Its DeepSeek-v4-flash and
+GPT-6 Luna variants reuse their own frozen Stage 1 outputs and receive the
+released Heuristic's evolution facts.
 
-The selected ground truth contains 54 TP and 973 FP. Heuristic predictions
-are unchanged. DeepSeek-v4-flash and GPT-6 Luna each have their own LLM and Fusion
-predictions; comparisons use the same model within each pair. GPT-6 Luna used
-low reasoning effort. No API call is needed to inspect or rebuild this release.
+The paper calls the classes **actionable** and **unactionable**. Stored class
+labels remain `TP` (actionable) and `FP` (unactionable); actionable is the
+positive class. These class codes differ from the TP/FP/FN/TN entries of a
+confusion matrix. The naming map changes neither labels nor metrics.
+
+The released ground truth has 54 TP and 973 FP. The selected Heuristic requires
+identical tool, project, and nonempty rule IDs and a strictly later version.
+Exact and Location use the complete normalized relative path; Snippet and Hash
+can match across files. Each later version is searched by strategy in the order
+Exact, Location, Snippet, Hash. Location uses the original matcher's nearest
+equal-line offsets with threshold 3. Snippet uses two lines of context on each
+side and threshold 0.8; Hash uses the original single-line tokenization and up
+to 30 tokens at each end. A later match predicts FP; no match predicts TP.
+The executable and full parameters are in `02_heuristic/`.
 
 ## Directory map
 
-- `01_dataset/`: benchmark warnings and source warning data.
-- `02_heuristic/`: matching algorithm and its 1,027 predictions.
-- `03_llm/`: LLM prompts, exact GPT prompt snapshots, and model predictions.
-- `04_analysis/`: one GT, the comparison dataset, RQ1/RQ2 tables, and rebuild script.
-- `05_fusion/`: per-model Stage 1, all-warning Stage 2 inputs, verification outputs, and analysis.
-- `ARTIFACT_MANIFEST.json`: model settings and hashes of released data and prompt files.
+- `01_dataset/`: 1,027-warning benchmark and preprocessing materials.
+- `02_heuristic/`: released matching code, configuration, predictions, and audit.
+- `03_llm/`: unchanged independent DeepSeek and GPT predictions.
+- `04_analysis/`: unchanged GT and generated Overall, SCA, CWE, and RQ2 tables.
+- `05_fusion/`: frozen model-specific Stage 1, complete Stage 2 prompt snapshots,
+  matching facts, final EvoVerify predictions, and evaluation.
+- `ARTIFACT_MANIFEST.json`: hashes of released data and prompt files.
 
 ## Offline validation and rebuild
 
@@ -29,24 +41,20 @@ python 04_analysis/scripts/build_artifact_manifest.py
 python 04_analysis/scripts/verify_artifact_manifest.py
 ```
 
-The analysis command rebuilds the comparison dataset and all reported RQ1, RQ2,
-and Fusion summary tables from the one GT and frozen predictions. GT is read only
-by the evaluation script, never by model input preparation.
+The Heuristic can be rerun without an API by passing the complete external
+warning pools and project source checkout to `02_heuristic/scripts/tracker.py`;
+see `02_heuristic/README.md`. The analysis rebuild reads the one GT and frozen
+predictions. Zero-denominator metrics are reported as 0. A warning can belong
+to multiple CWE groups, so CWE counts do not sum to Overall.
 
-Fusion validation has two separate outcomes: structural checks verify 1,027
-inputs, IDs, prompt hashes, and frozen outputs; semantic auditing records cases
-where a hypothesis status conflicts with the final binary label. Structural
-checks pass, while `05_fusion/analysis/results/verification_consistency_audit.json`
-records 12 DeepSeek and 79 GPT-6 Luna status/label conflicts. No frozen label
-is corrected by this audit.
+Structural EvoVerify validation checks 1,027 IDs, prompt hashes, Stage 1
+correspondence, and frozen labels. The separate hypothesis-status audit records
+14 DeepSeek and 13 GPT status/label conflicts without changing any label.
+Independent LLMs agree on 518 warnings; the released Heuristic disagrees with
+their shared label on 141. RQ2 IDs and GT breakdown are in `04_analysis/results/rq2/`.
 
-The RQ2 shared-LLM subset selects the 518 warnings where DeepSeek and GPT-6 Luna
-LLM labels agree. The heuristic disagrees with their shared label on 136 of
-these; IDs and subgroup counts are in `04_analysis/results/rq2/`.
-
-Manifest hashes use the repository's LF byte form. The verifier normalizes
-CRLF worktree files to LF before hashing, so the same manifest works on GitHub
-and Windows checkouts.
-
-Model prompts and predictions are preserved from the completed runs. This
-release does not include API keys or upstream repository source checkouts.
+The final Heuristic and EvoVerify outputs were selected from validated isolated
+runs and copied into these stable paths. Original GT, independent LLM results,
+and each model's Stage 1 file remain unchanged. The external migration record
+contains the prior repository backup, source hashes, and detailed mapping.
+No API call is needed to inspect or rebuild this release.

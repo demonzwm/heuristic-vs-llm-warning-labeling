@@ -1,6 +1,6 @@
 warning_id,ground_truth_label,heuristic_label,shared_llm_label,relation
 6,FP,FP,FP,agreement
-7,TP,FP,TP,disagreement
+7,TP,TP,TP,agreement
 8,FP,FP,FP,agreement
 10,FP,FP,FP,agreement
 12,TP,FP,TP,disagreement
@@ -15,7 +15,7 @@ warning_id,ground_truth_label,heuristic_label,shared_llm_label,relation
 23,FP,FP,FP,agreement
 24,FP,FP,FP,agreement
 26,FP,FP,FP,agreement
-34,FP,FP,FP,agreement
+34,FP,TP,FP,disagreement
 35,FP,FP,FP,agreement
 36,TP,FP,TP,disagreement
 40,FP,FP,FP,agreement
@@ -27,7 +27,7 @@ warning_id,ground_truth_label,heuristic_label,shared_llm_label,relation
 52,FP,FP,FP,agreement
 54,FP,FP,FP,agreement
 59,TP,FP,TP,disagreement
-60,TP,FP,TP,disagreement
+60,TP,TP,TP,agreement
 61,TP,FP,TP,disagreement
 62,FP,FP,FP,agreement
 64,FP,FP,FP,agreement
@@ -62,8 +62,8 @@ warning_id,ground_truth_label,heuristic_label,shared_llm_label,relation
 105,FP,FP,FP,agreement
 106,FP,FP,FP,agreement
 107,FP,FP,FP,agreement
-108,FP,FP,FP,agreement
-109,FP,FP,FP,agreement
+108,FP,TP,FP,disagreement
+109,FP,TP,FP,disagreement
 111,FP,TP,FP,disagreement
 112,FP,FP,FP,agreement
 113,FP,FP,FP,agreement
@@ -96,11 +96,11 @@ warning_id,ground_truth_label,heuristic_label,shared_llm_label,relation
 149,FP,FP,FP,agreement
 151,FP,FP,FP,agreement
 153,FP,FP,FP,agreement
-159,FP,FP,FP,agreement
+159,FP,TP,FP,disagreement
 160,FP,FP,FP,agreement
 162,TP,FP,FP,agreement
 165,TP,FP,TP,disagreement
-166,TP,FP,TP,disagreement
+166,TP,TP,TP,agreement
 167,FP,FP,FP,agreement
 170,FP,FP,FP,agreement
 171,FP,FP,TP,disagreement
@@ -291,10 +291,10 @@ warning_id,ground_truth_label,heuristic_label,shared_llm_label,relation
 517,FP,FP,FP,agreement
 521,FP,FP,FP,agreement
 522,FP,FP,FP,agreement
-524,FP,FP,FP,agreement
-526,FP,FP,FP,agreement
-531,FP,FP,FP,agreement
-533,FP,FP,FP,agreement
+524,FP,TP,FP,disagreement
+526,FP,TP,FP,disagreement
+531,FP,TP,FP,disagreement
+533,FP,TP,FP,disagreement
 534,FP,FP,TP,disagreement
 536,TP,FP,TP,disagreement
 538,FP,FP,FP,agreement
@@ -341,8 +341,8 @@ warning_id,ground_truth_label,heuristic_label,shared_llm_label,relation
 624,FP,FP,FP,agreement
 625,FP,FP,FP,agreement
 626,FP,FP,FP,agreement
-628,TP,FP,FP,agreement
-630,TP,FP,FP,agreement
+628,TP,TP,FP,disagreement
+630,TP,TP,FP,disagreement
 631,FP,FP,FP,agreement
 633,FP,FP,FP,agreement
 636,FP,FP,FP,agreement
@@ -351,8 +351,8 @@ warning_id,ground_truth_label,heuristic_label,shared_llm_label,relation
 642,TP,TP,FP,disagreement
 643,FP,FP,TP,disagreement
 644,FP,FP,TP,disagreement
-645,FP,FP,TP,disagreement
-647,FP,FP,TP,disagreement
+645,FP,TP,TP,agreement
+647,FP,TP,TP,agreement
 649,FP,FP,FP,agreement
 650,FP,FP,FP,agreement
 651,FP,FP,FP,agreement

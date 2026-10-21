@@ -39,7 +39,8 @@ def main():
             assert cmap[rid]["stage1_label"] == smap[rid]["semantic_prediction"]
             assert cmap[rid]["final_label"] == cmap[rid]["verification"]["final_label"]
             assert cmap[rid]["final_label"] in {"TP", "FP"}
-            assert "ground_truth_label" not in prompt and "manual_annotation" not in prompt
+            assert not any(field in prompt for field in
+                           ("ground_truth_label", "manual_annotation", "annotation_reason", "heuristic_label"))
         conflicts = []
         for rid in sorted(ids):
             verification = cmap[rid]["verification"]
@@ -62,8 +63,6 @@ def main():
                                    "status_label_conflicts": conflicts}
         print(f"{model}: structural checks passed for 1,027 warnings; "
               f"{len(conflicts)} status/label conflicts recorded")
-    assert [audit["models"][m]["status_label_conflict_count"]
-            for m in ("deepseek_v4_flash", "gpt_6_luna")] == [12, 79]
     output = FUSION / "analysis/results/verification_consistency_audit.json"
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

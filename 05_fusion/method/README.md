@@ -12,9 +12,16 @@ the exact per-warning prompts supplied during each complete run. These input
 files include warning metadata, code slices, Stage 1 outputs, and evolution
 facts. They contain neither ground truth nor the Heuristic final label.
 
-`data/` contains the benchmark warning input and original matching facts.
+`data/` contains the benchmark warning input and released Heuristic matching facts.
 The method copy of matching facts excludes the Heuristic TP/FP decision. Its published
 prediction remains under `02_heuristic/results/` for evaluation only.
+
+`run_config.json` records each model's actual Stage 2 request configuration,
+frozen Stage 1 hash, and final prompt/prediction hashes. Both models reused
+their own frozen Stage 1 and received the same released evolution facts. The
+1,027 final predictions for each model are self-contained; no experiment cache
+directory is needed to inspect or evaluate them. Stage 2 requests exclude GT,
+annotation reasons, and the Heuristic final class label.
 
 The exact prompt snapshots and responses are the authoritative run record.
 `scripts/validate_fusion_release.py` checks full coverage and their hashes

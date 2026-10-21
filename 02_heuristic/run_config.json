@@ -1,0 +1,21 @@
+{
+  "location_threshold": 3,
+  "location_method": "paper baseline nearest equal line on each side, compare independent offsets",
+  "snippet_context_lines_each_side": 2,
+  "snippet_similarity_threshold": 0.8,
+  "hash_token_window_each_end": 30,
+  "diff": "difflib.SequenceMatcher(None,old_lines,new_lines), autojunk=True; split(\"\\n\")",
+  "candidate_order": "original input index",
+  "version_order": "packaging.version.parse ascending",
+  "strategy_order": [
+    "Exact",
+    "Location",
+    "Snippet",
+    "Hash"
+  ],
+  "cppcheck_filter": "at least one CWE in original top25 set; exclude file_path starting test/",
+  "classification": "FP if matched, TP otherwise",
+  "zero_denominator": "0",
+  "entry_command": "python 02_heuristic/scripts/tracker.py --source-pool <path> --cppcheck-pool <path> --source-root <path>",
+  "source_warning_pools_are_external": true
+}

@@ -2,34 +2,35 @@
   "DeepSeek-v4-flash": {
     "stage2_coverage": 1027,
     "outcomes": {
-      "correct_retain": 811,
-      "incorrect_retain": 97,
-      "incorrect_flip": 26,
-      "TP_to_FP": 91,
-      "FP_to_TP": 28,
-      "correct_flip": 93
+      "correct_retain": 804,
+      "incorrect_flip": 33,
+      "FP_to_TP": 34,
+      "incorrect_retain": 102,
+      "TP_to_FP": 87,
+      "correct_flip": 88
     },
     "evolution_evidence_reliability": {
-      "LOW": 479,
-      "MEDIUM": 479,
-      "UNAVAILABLE": 69
+      "MEDIUM": 396,
+      "HIGH": 532,
+      "LOW": 63,
+      "UNAVAILABLE": 36
     }
   },
   "GPT-6 Luna": {
     "stage2_coverage": 1027,
     "outcomes": {
-      "incorrect_retain": 147,
-      "correct_flip": 348,
-      "TP_to_FP": 368,
-      "correct_retain": 509,
-      "incorrect_flip": 23,
-      "FP_to_TP": 3
+      "correct_flip": 441,
+      "TP_to_FP": 471,
+      "correct_retain": 500,
+      "incorrect_flip": 32,
+      "incorrect_retain": 54,
+      "FP_to_TP": 2
     },
     "evolution_evidence_reliability": {
-      "LOW": 438,
-      "MEDIUM": 500,
-      "UNAVAILABLE": 69,
-      "HIGH": 20
+      "HIGH": 928,
+      "LOW": 62,
+      "UNAVAILABLE": 36,
+      "MEDIUM": 1
     }
   }
 }

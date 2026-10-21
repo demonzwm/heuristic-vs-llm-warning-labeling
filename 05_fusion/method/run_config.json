@@ -1,0 +1,43 @@
+{
+  "stage2_scope": "all 1027 benchmark warnings",
+  "evolution_facts": "method/data/warning_evolution_facts_1027.json",
+  "heuristic_predictions": "../../02_heuristic/results/heuristic_labels_1027.json",
+  "stage1_policy": "reuse frozen model-specific Stage 1",
+  "models": {
+    "deepseek_v4_flash": {
+      "stage1_sha256": "4c365b60cc0e88e2522569f66ba221f1c7588ce8d340e086e6bea9cf196cfbab",
+      "request_model": "deepseek-v4-flash",
+      "generation_config": {
+        "model": "deepseek-v4-flash",
+        "system": "Return valid JSON only.",
+        "thinking": {
+          "type": "disabled"
+        },
+        "temperature": 0,
+        "top_p": 1,
+        "max_tokens": 4096,
+        "stream": false
+      },
+      "stage2_prompt_sha256": "5907cfaaa369e6be6367b21cb1031fbb7b8ef4122fc8a67afc50becda73d4a0b",
+      "final_prediction_sha256": "074d4e39df4838393164dca41ef033ef28d7c078e6e87ccbf260ebb032132517",
+      "coverage": 1027,
+      "exact_request_cache_reuse": 565,
+      "new_successful_calls": 462,
+      "final_failed_requests": 0
+    },
+    "gpt_6_luna": {
+      "stage1_sha256": "288a8d431fd606b629b29c5b865836aeac51661a3fd776067cbde6132bbf0ad9",
+      "request_model": "gpt-6-luna",
+      "generation_config": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low"
+      },
+      "stage2_prompt_sha256": "ae6ce702bd64450306e8251f4c33a4f5ca562db194040ce85cde01f142ce0925",
+      "final_prediction_sha256": "b7e8cb4e82a06f1ed9978fd60187cfbdd6a78fe08a8885c5b05a30c44e43f001",
+      "coverage": 1027,
+      "exact_request_cache_reuse": 565,
+      "new_successful_calls": 462,
+      "final_failed_requests": 0
+    }
+  }
+}

@@ -7,7 +7,10 @@ unchanged. Warning 200's local annotation note is preserved.
 
 `scripts/build_final_paper_sync.py` reads the frozen Heuristic, LLM, and Fusion results and
 rebuilds one joined 1,027-row comparison dataset, RQ1 overall/SCA/CWE tables,
-RQ2 agreement tables, the 518-warning shared-LLM subset, and Fusion summary metrics. It never changes predictions.
+RQ2 agreement tables, the 518-warning shared-LLM subset, and model-specific
+independent LLM, Stage 1, and EvoVerify Overall/SCA/CWE comparisons and label
+transitions. It never changes predictions. Zero-denominator metrics are 0;
+CWE groups overlap and must not be summed into Overall.
 
 ```powershell
 python 04_analysis/scripts/build_final_paper_sync.py

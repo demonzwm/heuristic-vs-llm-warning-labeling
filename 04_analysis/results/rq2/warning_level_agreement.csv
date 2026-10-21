@@ -5,7 +5,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 4,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
 5,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
 6,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,FP,all correct
-7,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,TP,mixed
+7,codeql,cpp/inconsistent-null-check,CWE-476,TP,TP,TP,TP,all correct
 8,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 9,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,FP,mixed
 10,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
@@ -32,7 +32,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 31,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,FP,TP,only GPT LLM correct
 32,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 33,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,TP,mixed
-34,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
+34,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,FP,mixed
 35,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 36,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,TP,mixed
 37,codeql,cpp/unterminated-variadic-call,CWE-121,FP,FP,FP,TP,mixed
@@ -47,8 +47,8 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 46,codeql,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,TP,mixed
 47,codeql,cpp/invalid-pointer-deref,CWE-787; CWE-119; CWE-125; CWE-193,FP,FP,FP,TP,mixed
 48,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
-49,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
-50,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
+49,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,TP,FP,only GPT LLM correct
+50,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,TP,FP,TP,only DeepSeek LLM correct
 51,codeql,cpp/redundant-null-check-simple,CWE-476,FP,FP,FP,FP,all correct
 52,codeql,cpp/no-space-for-terminator,CWE-122; CWE-120; CWE-131,FP,FP,FP,FP,all correct
 53,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
@@ -58,7 +58,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 57,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
 58,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,TP,FP,mixed
 59,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,TP,mixed
-60,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,TP,mixed
+60,codeql,cpp/inconsistent-null-check,CWE-476,TP,TP,TP,TP,all correct
 61,codeql,cpp/inconsistent-null-check,CWE-476,TP,FP,TP,TP,mixed
 62,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
 63,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
@@ -106,8 +106,8 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 105,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 106,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 107,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
-108,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
-109,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,FP,all correct
+108,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,FP,FP,mixed
+109,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,FP,FP,mixed
 110,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,TP,FP,only GPT LLM correct
 111,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,FP,FP,mixed
 112,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
@@ -120,7 +120,7 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 119,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 120,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 121,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
-122,codeql,cpp/inconsistent-null-check,CWE-476,FP,FP,FP,TP,mixed
+122,codeql,cpp/inconsistent-null-check,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 123,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 124,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 125,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
@@ -156,14 +156,14 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 156,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,TP,FP,mixed
 157,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,FP,FP,TP,only GPT LLM correct
 158,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,TP,mixed
-159,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all correct
+159,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,TP,FP,FP,mixed
 160,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,FP,FP,FP,FP,all correct
 161,codeql,cpp/unsafe-strcat,CWE-251; CWE-676; CWE-120,TP,FP,FP,TP,only GPT LLM correct
 162,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,FP,FP,all incorrect
 163,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,FP,only DeepSeek LLM correct
 164,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,FP,TP,only GPT LLM correct
 165,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,TP,mixed
-166,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,FP,TP,TP,mixed
+166,codeql,cpp/overrunning-write,CWE-787; CWE-120; CWE-805,TP,TP,TP,TP,all correct
 167,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 168,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,TP,FP,mixed
 169,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,TP,mixed
@@ -357,8 +357,8 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 357,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 358,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
 359,codeql,cpp/unbounded-write,CWE-787; CWE-120; CWE-805,FP,FP,FP,FP,all correct
-360,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
-361,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,FP,FP,TP,mixed
+360,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,TP,FP,TP,only DeepSeek LLM correct
+361,codeql,cpp/offset-use-before-range-check,CWE-120; CWE-125,FP,TP,FP,TP,only DeepSeek LLM correct
 362,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 363,codeql,cpp/overflow-buffer,CWE-121; CWE-119; CWE-122; CWE-126,FP,FP,FP,FP,all correct
 364,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
@@ -520,17 +520,17 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 520,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 521,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 522,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
-523,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-524,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
+523,csa,Dereference of null pointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+524,csa,Dereference of null pointer,CWE-476,FP,TP,FP,FP,mixed
 525,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-526,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
+526,csa,Dereference of null pointer,CWE-476,FP,TP,FP,FP,mixed
 527,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 528,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-529,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
+529,csa,Dereference of null pointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 530,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT LLM correct
-531,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
+531,csa,Dereference of null pointer,CWE-476,FP,TP,FP,FP,mixed
 532,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-533,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
+533,csa,Dereference of null pointer,CWE-476,FP,TP,FP,FP,mixed
 534,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 535,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 536,csa,Dereference of null pointer,CWE-476,TP,FP,TP,TP,mixed
@@ -596,13 +596,13 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 596,csa,Dereference of null pointer,CWE-476,TP,FP,FP,FP,all incorrect
 597,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 598,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-599,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
+599,csa,Dereference of null pointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 600,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 601,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 602,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 603,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 604,csa,Dereference of null pointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
-605,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
+605,csa,Dereference of null pointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 606,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 607,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 608,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
@@ -625,9 +625,9 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 625,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 626,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 627,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-628,csa,Dereference of null pointer,CWE-476,TP,FP,FP,FP,all incorrect
-629,csa,Dereference of null pointer,CWE-476,TP,FP,FP,TP,only GPT LLM correct
-630,csa,Dereference of null pointer,CWE-476,TP,FP,FP,FP,all incorrect
+628,csa,Dereference of null pointer,CWE-476,TP,TP,FP,FP,only heuristic correct
+629,csa,Dereference of null pointer,CWE-476,TP,TP,FP,TP,mixed
+630,csa,Dereference of null pointer,CWE-476,TP,TP,FP,FP,only heuristic correct
 631,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 632,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 633,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
@@ -642,9 +642,9 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 642,csa,Dereference of null pointer,CWE-476,TP,TP,FP,FP,only heuristic correct
 643,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
 644,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
-645,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
+645,csa,Dereference of null pointer,CWE-476,FP,TP,TP,TP,all incorrect
 646,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
-647,csa,Dereference of null pointer,CWE-476,FP,FP,TP,TP,only heuristic correct
+647,csa,Dereference of null pointer,CWE-476,FP,TP,TP,TP,all incorrect
 648,csa,Dereference of null pointer,CWE-476,FP,FP,FP,TP,mixed
 649,csa,Dereference of null pointer,CWE-476,FP,FP,FP,FP,all correct
 650,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
@@ -870,10 +870,10 @@ warning_id,tool_name,rule_id,cwe,ground_truth_label,heuristic_label,deepseek_llm
 870,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,TP,TP,only heuristic correct
 871,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 872,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
-873,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-874,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-875,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
-876,cppcheck,nullPointer,CWE-476,FP,FP,FP,TP,mixed
+873,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+874,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+875,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
+876,cppcheck,nullPointer,CWE-476,FP,TP,FP,TP,only DeepSeek LLM correct
 877,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,TP,mixed
 878,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct
 879,cppcheck,nullPointerRedundantCheck,CWE-476,FP,FP,FP,FP,all correct

@@ -49,6 +49,19 @@ def cwes(raw):
         x.strip() for x in str(raw or "").replace(",", ";").split(";") if x.strip()]
 
 
+def transitions(rows, old_field, new_field):
+    result = {}
+    for old in ("TP", "FP"):
+        for new in ("TP", "FP"):
+            subset = [x for x in rows if x[old_field] == old and x[new_field] == new]
+            result[f"{old}->{new}"] = {
+                "count": len(subset),
+                "warning_ids": [x["warning_id"] for x in subset],
+                "ground_truth": dict(Counter(x["ground_truth_label"] for x in subset)),
+            }
+    return result
+
+
 def build():
     gt = mapping(ROOT / "04_analysis/ground_truth/ground_truth_labels_1027.json",
                  lambda x: x["warning_id"], lambda x: x["ground_truth_label"])
@@ -58,17 +71,23 @@ def build():
                  lambda x: x["warning_info"]["warning_id"], lambda x: x["llm_based_labeling"]["deepseek"]["label"])
     gb = mapping(ROOT / "03_llm/gpt/results/gpt_6_luna_baseline_predictions_1027.json",
                  lambda x: x["warning_id"], lambda x: x["label"])
+    ds1 = mapping(FUSION / "method/stage1/deepseek_v4_flash/semantic_predictions_1027.json",
+                  lambda x: x["warning_id"], lambda x: x["semantic_prediction"])
+    gs1 = mapping(FUSION / "method/stage1/gpt_6_luna/semantic_predictions_1027.json",
+                  lambda x: x["warning_id"], lambda x: x["semantic_prediction"])
     dcp = FUSION / "deepseek_v4_flash/results/fusion_predictions_1027.json"
     gcp = FUSION / "gpt_6_luna/results/fusion_predictions_1027.json"
     dc = mapping(dcp, lambda x: x["warning_id"], lambda x: x["final_label"])
     gc = mapping(gcp, lambda x: x["warning_id"], lambda x: x["final_label"])
     benchmark = read(ROOT / "01_dataset/processed/benchmark/benchmark_warnings_1027.json")
     ids = {int(x["warning_id"]) for x in benchmark}
-    assert len(benchmark) == 1027 and all(set(m) == ids for m in (gt, a, db, gb, dc, gc))
+    assert len(benchmark) == 1027 and all(set(m) == ids for m in (gt, a, db, gb, ds1, gs1, dc, gc))
     rows = [{**x, "ground_truth_label": gt[int(x["warning_id"])],
              "heuristic_label": a[int(x["warning_id"])],
              "deepseek_llm_label": db[int(x["warning_id"])],
              "gpt_6_luna_llm_label": gb[int(x["warning_id"])],
+             "deepseek_stage1_label": ds1[int(x["warning_id"])],
+             "gpt_6_luna_stage1_label": gs1[int(x["warning_id"])],
              "deepseek_fusion_label": dc[int(x["warning_id"])],
              "gpt_6_luna_fusion_label": gc[int(x["warning_id"])]} for x in benchmark]
     assert Counter(x["ground_truth_label"] for x in rows) == {"TP": 54, "FP": 973}
@@ -122,11 +141,10 @@ def build():
                     for x in shared_llm]
     table(RESULTS / "rq2/shared_llm_518_warning_level.csv", shared_cases)
     discordant = [x for x in shared_cases if x["relation"] == "disagreement"]
-    assert len(discordant) == 136
     save(RESULTS / "rq2/shared_llm_518_summary.json", {
         "selection_rule": "DeepSeek-v4-flash LLM label equals GPT-6 Luna LLM label",
         "selected_warnings": 518,
-        "heuristic_vs_shared_llm": {"agreement": 382, "disagreement": 136},
+        "heuristic_vs_shared_llm": {"agreement": len(shared_cases)-len(discordant), "disagreement": len(discordant)},
         "disagreement_directions": {
             "heuristic_FP_shared_llm_TP": sum(x["heuristic_label"] == "FP" for x in discordant),
             "heuristic_TP_shared_llm_FP": sum(x["heuristic_label"] == "TP" for x in discordant),
@@ -144,13 +162,27 @@ def build():
         ],
     })
     summary = []
+    fusion_sca = []
+    fusion_cwe = []
     revisions = {}
-    for model, bfield, cfield, path in (
-        ("DeepSeek-v4-flash", "deepseek_llm_label", "deepseek_fusion_label", dcp),
-        ("GPT-6 Luna", "gpt_6_luna_llm_label", "gpt_6_luna_fusion_label", gcp),
+    label_transitions = {}
+    for model, bfield, sfield, cfield, path in (
+        ("DeepSeek-v4-flash", "deepseek_llm_label", "deepseek_stage1_label", "deepseek_fusion_label", dcp),
+        ("GPT-6 Luna", "gpt_6_luna_llm_label", "gpt_6_luna_stage1_label", "gpt_6_luna_fusion_label", gcp),
     ):
+        methods = (("LLM", bfield), ("Stage 1", sfield), ("Fusion", cfield))
         summary.extend(({"model": model, "method": method, **score(rows, field)}
-                        for method, field in (("LLM", bfield), ("Fusion", cfield))))
+                        for method, field in methods))
+        fusion_sca.extend({"model": model, "method": method, "tool": tool,
+                           "sample_count": len(subset), **score(subset, field)}
+                          for tool in sorted({x["tool_name"] for x in rows})
+                          for subset in [[x for x in rows if x["tool_name"] == tool]]
+                          for method, field in methods)
+        fusion_cwe.extend({"model": model, "method": method, "cwe": cwe,
+                           "sample_count": len(subset), **score(subset, field)}
+                          for cwe in sorted({x["cwe_token"] for x in expanded})
+                          for subset in [[x for x in expanded if x["cwe_token"] == cwe]]
+                          for method, field in methods)
         items = read(path)
         stage1 = {int(x["warning_id"]): x["stage1_label"] for x in items}
         outcomes = Counter()
@@ -164,14 +196,25 @@ def build():
         assert sum(outcomes[k] for k in ("correct_retain", "incorrect_retain", "correct_flip", "incorrect_flip")) == 1027
         revisions[model] = {"stage2_coverage": 1027, "outcomes": dict(outcomes),
                             "evolution_evidence_reliability": dict(reliability)}
+        label_transitions[model] = {
+            "independent_llm_to_stage2": transitions(rows, bfield, cfield),
+            "stage1_to_stage2": transitions(rows, sfield, cfield),
+        }
     table(FUSION / "analysis/results/fusion_overall_metrics.csv", summary)
+    table(FUSION / "analysis/results/fusion_sca_metrics.csv", fusion_sca)
+    table(FUSION / "analysis/results/fusion_cwe_metrics.csv", fusion_cwe)
     table(FUSION / "analysis/results/fusion_vs_baseline_comparison.csv",
-          [{"model": name, "llm_F1": b["F1"], "fusion_F1": c["F1"],
-            "llm_precision": b["Precision"], "fusion_precision": c["Precision"],
-            "llm_recall": b["Recall"], "fusion_recall": c["Recall"]}
+          [{"model": name, "llm_F1": b["F1"], "stage1_F1": s["F1"], "fusion_F1": c["F1"],
+            "fusion_minus_llm_F1": round(c["F1"]-b["F1"], 6),
+            "fusion_minus_stage1_F1": round(c["F1"]-s["F1"], 6),
+            "llm_precision": b["Precision"], "stage1_precision": s["Precision"],
+            "fusion_precision": c["Precision"],
+            "llm_recall": b["Recall"], "stage1_recall": s["Recall"],
+            "fusion_recall": c["Recall"]}
            for name in ("DeepSeek-v4-flash", "GPT-6 Luna")
-           for b, c in [[x for x in summary if x["model"] == name]]])
+           for b, s, c in [[x for x in summary if x["model"] == name]]])
     save(FUSION / "analysis/results/stage2_revision_analysis.json", revisions)
+    save(FUSION / "analysis/results/label_transitions.json", label_transitions)
     print("Rebuilt GT, heuristic, LLM, fusion, RQ1, and RQ2 analyses.")
 
 

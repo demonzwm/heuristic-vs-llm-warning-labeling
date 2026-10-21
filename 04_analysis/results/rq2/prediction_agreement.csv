@@ -1,7 +1,7 @@
 category,count
-all correct,373
+all correct,368
 all incorrect,9
-mixed,497
-only DeepSeek LLM correct,29
+mixed,490
+only DeepSeek LLM correct,41
 only GPT LLM correct,22
 only heuristic correct,97
