@@ -33,6 +33,7 @@
     "02_heuristic/scripts/match.py": "08f662f4e7a115b6ddb22e82d58ac7f3e0d762384a33a87d232029f70cf8958d",
     "02_heuristic/scripts/tracker.py": "a83074a11be4504e346baeee0423c4e99dcf38432e55412d28987fd597a7b644",
     "03_llm/deepseek/results/deepseek_v4_flash_semantic_baseline_1027.json": "52a11deda270328f3284a0070d55da7d70c61315445cf095111472544ed0996d",
+    "03_llm/gpt/inputs/baseline_prompts_1027.json": "6ce9bce2335e0c58ac308bf2584f188cb80f18d88d8019118cc931d372017daa",
     "03_llm/gpt/results/gpt_6_luna_baseline_predictions_1027.json": "19f5b45dc653dad98817639ed47f90cae43efabec8fb52a7c40cf4f9176f46b8",
     "03_llm/prompts/baseline_binary_prompt.py": "84505f89394650005b35a16eec3346415bcc57792636dcb0e1550ea7c88eedc4",
     "03_llm/scripts/deepseek/evaluate_semantic_baseline_v4_flash.py": "fea2ebc7b2a211a923fb31496d611c1ce359e8126701f5b753a7e970a9a57eff",

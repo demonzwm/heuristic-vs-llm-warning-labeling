@@ -33,7 +33,8 @@ The executable and full parameters are in `02_heuristic/`.
 
 The independent LLM baseline task template is in
 `03_llm/prompts/baseline_binary_prompt.py`; released binary predictions and
-their offline checks are described in `03_llm/README.md`.
+their offline checks are described in `03_llm/README.md`. The frozen GPT
+request texts are retained under `03_llm/gpt/inputs/`.
 
 ## Offline validation and rebuild
 
