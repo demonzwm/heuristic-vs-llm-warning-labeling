@@ -17,6 +17,7 @@ def main():
         "01_dataset/processed/benchmark/benchmark_warnings_1027.json",
         "02_heuristic/scripts/*.py", "02_heuristic/*.json",
         "02_heuristic/results/*.json", "02_heuristic/results/*.csv",
+        "03_llm/prompts/*.py", "03_llm/scripts/deepseek/*.py",
         "03_llm/deepseek/results/deepseek_v4_flash_semantic_baseline_1027.json",
         "03_llm/gpt/inputs/*.json", "03_llm/gpt/results/*.json",
         "04_analysis/ground_truth/*.json", "04_analysis/ground_truth/*.csv",

@@ -1,6 +1,6 @@
 {
   "location_threshold": 3,
-  "location_method": "paper baseline nearest equal line on each side, compare independent offsets",
+  "location_method": "nearest equal line independently on each side; compare warning offsets",
   "snippet_context_lines_each_side": 2,
   "snippet_similarity_threshold": 0.8,
   "hash_token_window_each_end": 30,

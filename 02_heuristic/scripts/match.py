@@ -24,9 +24,9 @@ class Matcher:
         return self.cache[key]
     def location(self,a,b,x,y):
         if normpath(a['file_path'])!=normpath(b['file_path']): return None
-        # Restore the paper baseline's nearest-equal-line offset calculation.
-        # The A-run's common tool/project/rule/version filter and full-path
-        # requirement remain in match_version and above, respectively.
+        # Compare each warning's offset from its nearest equal line.
+        # Candidate eligibility is checked by match_version; Location requires
+        # the complete normalized relative path to match.
         matches=[]
         for tag,i1,i2,j1,j2 in difflib.SequenceMatcher(None,x.split('\n'),y.split('\n')).get_opcodes():
             if tag=='equal':

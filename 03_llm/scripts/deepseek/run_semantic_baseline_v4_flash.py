@@ -37,7 +37,7 @@ DEFAULT_WORKERS = 4
 DEFAULT_RETRIES = 3
 DEFAULT_TIMEOUT = 180
 DEFAULT_SLEEP_SECONDS = 0.0
-PROMPT_STRATEGY = "semantic_binary_without_label"
+PROMPT_STRATEGY = "semantic_binary_baseline"
 
 REPAIR_PROMPT = """The previous response was invalid or incomplete.
 

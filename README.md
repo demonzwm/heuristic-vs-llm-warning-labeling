@@ -31,6 +31,10 @@ The executable and full parameters are in `02_heuristic/`.
   matching facts, final EvoVerify predictions, and evaluation.
 - `ARTIFACT_MANIFEST.json`: hashes of released data and prompt files.
 
+The independent LLM baseline task template is in
+`03_llm/prompts/baseline_binary_prompt.py`; released binary predictions and
+their offline checks are described in `03_llm/README.md`.
+
 ## Offline validation and rebuild
 
 ```powershell
